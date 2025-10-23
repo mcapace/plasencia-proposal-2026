@@ -1,0 +1,202 @@
+# 📁 Project File Structure
+
+```
+plasencia-proposal/
+│
+├── 📄 README.md                    # Full documentation
+├── 📄 QUICK-START.md               # 3-minute deployment guide
+├── 📄 DEPLOY.md                    # Deployment instructions
+├── 📄 PROJECT-SUMMARY.md           # Feature overview & guide
+├── 📄 CHECKLIST.md                 # Deployment checklist
+├── 📄 FILE-STRUCTURE.txt           # This file
+│
+├── 📄 package.json                 # Dependencies & scripts
+├── 📄 package-lock.json            # Dependency lock file (auto-generated)
+├── 📄 next.config.js               # Next.js configuration
+├── 📄 tailwind.config.js           # Tailwind CSS configuration
+├── 📄 postcss.config.js            # PostCSS configuration
+├── 📄 .gitignore                   # Git ignore rules
+│
+├── 📁 app/                         # Application code
+│   ├── 📄 page.js                  # ⭐ MAIN LANDING PAGE (all content here!)
+│   ├── 📄 layout.js                # Site layout & metadata
+│   └── 📄 globals.css              # Global styles & Tailwind imports
+│
+├── 📁 .next/                       # Build output (auto-generated, don't edit)
+│
+└── 📁 node_modules/                # Dependencies (auto-generated after npm install)
+```
+
+## 🎯 Key Files You'll Work With
+
+### 1. **app/page.js** - The Star of the Show ⭐
+This is where ALL the magic happens:
+- All content and copy
+- All sections and layout
+- All animations and interactions
+- **This is the ONLY file you need to edit for content changes!**
+
+### 2. **package.json** - Dependencies
+Lists all the libraries used:
+- Next.js (React framework)
+- Tailwind CSS (styling)
+- Framer Motion (animations)
+- Lucide React (icons)
+
+### 3. **README.md** - Your Guide
+Complete documentation:
+- How to install
+- How to deploy
+- How to customize
+- Troubleshooting tips
+
+### 4. **QUICK-START.md** - Fast Track
+For when you just want to deploy NOW:
+- 3-minute guide
+- Simple commands
+- No fluff
+
+## 📝 Configuration Files
+
+### next.config.js
+- Tells Next.js how to build
+- Configured for static export
+- Ready for Vercel deployment
+
+### tailwind.config.js
+- Defines design system
+- Color palette
+- Animations
+- Responsive breakpoints
+
+### postcss.config.js
+- Processes Tailwind CSS
+- Auto-prefixes styles
+- Optimizes CSS output
+
+### .gitignore
+- Tells Git what NOT to track
+- Excludes node_modules
+- Excludes build files
+
+## 🎨 App Directory Explained
+
+```
+app/
+├── page.js       # The entire landing page
+│                 # - Hero section
+│                 # - Strategic vision
+│                 # - Print program
+│                 # - Digital hub
+│                 # - All other sections
+│
+├── layout.js     # Wraps entire site
+│                 # - HTML structure
+│                 # - Meta tags (SEO)
+│                 # - Font imports
+│                 # - Global layout
+│
+└── globals.css   # Global styles
+                  # - Tailwind imports
+                  # - Custom scrollbar
+                  # - Base styles
+```
+
+## 🚀 Auto-Generated Directories
+
+These are created automatically - **don't edit them:**
+
+### .next/
+- Created when you run `npm run build`
+- Contains optimized production files
+- Deleted and rebuilt each time
+
+### node_modules/
+- Created when you run `npm install`
+- Contains all dependencies
+- Can be deleted and reinstalled anytime
+
+## 📊 File Sizes (Approximate)
+
+```
+app/page.js          ~53KB    (Main landing page code)
+package.json         ~600B    (Dependency list)
+tailwind.config.js   ~400B    (Style config)
+README.md            ~5KB     (Documentation)
+```
+
+**Total project size (without node_modules):** ~60KB
+**With node_modules:** ~200MB (normal for Node projects)
+
+## 🎯 What To Edit For Common Changes
+
+### Change Investment Amount
+📄 Edit: `app/page.js`
+🔍 Search for: `$400,000` or `$310,800` or `$89,200`
+
+### Change Colors
+📄 Edit: `app/page.js`
+🔍 Search for: `from-amber-500` or `to-orange-600`
+💡 Replace with any Tailwind color class
+
+### Change Company Name
+📄 Edit: `app/page.js`
+🔍 Search for: `PLASENCIA`
+📄 Also edit: `app/layout.js` (meta tags)
+
+### Change Page Title
+📄 Edit: `app/layout.js`
+🔍 Look for: `title: '...'`
+
+### Add Custom Font
+📄 Edit: `app/layout.js`
+💡 Import from `next/font/google`
+
+## 🔧 Scripts In package.json
+
+```json
+"dev"     → npm run dev     (Start development server)
+"build"   → npm run build   (Build for production)
+"start"   → npm start       (Run production build locally)
+"lint"    → npm run lint    (Check code quality)
+```
+
+## 💾 Where Everything Lives
+
+```
+Development:  /home/claude/plasencia-proposal/
+Production:   Deployed on Vercel
+Source:       Your GitHub repository (optional)
+```
+
+## 🎬 Build Process
+
+1. You edit `app/page.js`
+2. Save the file
+3. Next.js sees the change
+4. Page auto-refreshes (in dev mode)
+5. When ready, you run `npm run build`
+6. Next.js creates optimized files in `.next/`
+7. You deploy to Vercel
+8. Vercel serves the optimized files
+9. Users see your beautiful proposal!
+
+## 📱 After Deployment
+
+Your site structure on Vercel:
+```
+your-site.vercel.app/
+├── /              (Main landing page)
+├── /_next/        (Optimized assets)
+└── /favicon.ico   (Site icon - if you add one)
+```
+
+---
+
+## 🎯 Remember
+
+**The ONE file that matters most:** `app/page.js`
+
+Everything else is just configuration to make that file shine! ✨
+
+**Questions about any file?** Check the comments inside each file - they explain what everything does!
