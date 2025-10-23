@@ -773,20 +773,6 @@ export default function Home() {
               <p className="text-slate-600 font-light">Interactive platform</p>
                 </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-3xl p-8 shadow-2xl text-center"
-            >
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <DollarSign className="text-white" size={36} />
-              </div>
-              <h3 className="text-2xl font-light text-white mb-4">Total Investment</h3>
-              <div className="text-4xl font-light text-white mb-2">$400,000</div>
-              <p className="text-amber-100 font-light">12-month program</p>
-          </motion.div>
           </div>
         </div>
       </section>
