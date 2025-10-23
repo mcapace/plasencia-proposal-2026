@@ -83,34 +83,35 @@ export default function Home() {
 
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
               className="text-center lg:text-left"
             >
-              {/* Plasencia Logo */}
+              {/* Plasencia & Cigar Aficionado Logos */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="mb-8"
               >
-                <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-xl border border-amber-200/50">
-                  <div className="w-20 h-20 flex items-center justify-center bg-transparent">
-                    <img 
-                      src="/images/plasencia-cigars-logo__1_-removebg-preview.png" 
-                      alt="Plasencia Cigars Logo" 
-                      className="w-16 h-16 object-contain"
-                      style={{ background: 'transparent' }}
-                    />
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-slate-800 tracking-wide">PLASENCIA</div>
-                    <div className="text-sm text-slate-600 font-bold tracking-wider">CIGARS</div>
-                  </div>
+                <div className="flex justify-center lg:justify-start items-center space-x-8">
+                  <img 
+                    src="/images/plasencia-cigars-logo__1_-removebg-preview.png" 
+                    alt="Plasencia Cigars Logo" 
+                    className="w-24 h-24 object-contain"
+                    style={{ background: 'transparent' }}
+                  />
+                  <div className="text-2xl font-light text-slate-600">×</div>
+                  <img 
+                    src="/images/images__13_-removebg-preview.png" 
+                    alt="Cigar Aficionado Logo" 
+                    className="w-24 h-24 object-contain"
+                    style={{ background: 'transparent' }}
+                  />
                 </div>
-          </motion.div>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -264,7 +265,7 @@ export default function Home() {
               Print Program
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              Six double-page spreads that dominate every issue, creating an unmissable presence in the world's premier cigar publication.
+              Six double-page spreads that dominate every issue of Cigar Aficionado, creating an unmissable presence in the world's premier cigar publication.
             </p>
           </motion.div>
 
@@ -820,7 +821,7 @@ export default function Home() {
             >
               <h3 className="text-3xl font-light text-slate-800 mb-6">The Strategic Vision</h3>
               <p className="text-lg text-slate-600 font-light leading-relaxed mb-6">
-                A unified, year-long brand narrative that positions Plasencia as THE authority in premium cigars. Through strategic integration of print and digital, this program creates one cohesive story told across multiple touchpoints.
+                A unified, year-long brand narrative that positions Plasencia as THE authority in premium cigars. Through strategic integration of print and digital across Cigar Aficionado, this program creates one cohesive story told across multiple touchpoints.
               </p>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
                 <div className="text-center">
@@ -846,7 +847,7 @@ export default function Home() {
                   <h4 className="text-xl font-light text-slate-800">Print Program</h4>
                 </div>
                 <p className="text-slate-600 font-light leading-relaxed">
-                  6 double-page spreads across all 6 issues, driving qualified traffic to the branded content hub with QR codes and custom URLs.
+                  6 double-page spreads across all 6 issues of Cigar Aficionado, driving qualified traffic to the branded content hub with QR codes and custom URLs.
                 </p>
               </div>
 
