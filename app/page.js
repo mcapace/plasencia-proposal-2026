@@ -89,17 +89,17 @@ export default function Home() {
                 className="mb-8"
               >
                 <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-xl border border-amber-200/50">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center shadow-lg">
-                    <div className="w-12 h-12 border-4 border-white rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-2xl">P</span>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 border-4 border-black rounded-full flex items-center justify-center bg-transparent">
+                      <span className="text-black font-bold text-2xl">P</span>
                     </div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-slate-800 tracking-wide">PLASENCIA</div>
                     <div className="text-sm text-slate-600 font-bold tracking-wider">CIGARS</div>
                   </div>
-                </div>
-              </motion.div>
+            </div>
+          </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -342,8 +342,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Premium Products Section */}
-      <section className="py-24 bg-gradient-to-br from-amber-50/30 to-orange-50/20">
+      {/* Brand Heritage Section */}
+      <section className="py-24 bg-gradient-to-br from-green-50/30 to-amber-50/20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -353,12 +353,126 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Brand Heritage
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              From tobacco fields to finished cigars - the Plasencia family's multi-generational commitment to excellence.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-green-200/30">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-light text-slate-800 mb-4">Tobacco Field Excellence</h3>
+                  <p className="text-slate-600 font-light leading-relaxed">
+                    Our team works directly in the tobacco fields, ensuring every leaf meets our exacting standards for premium cigar production.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Leaf className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Field to Factory</h4>
+                    <p className="text-slate-500 font-light text-sm">Direct oversight</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Award className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Quality Control</h4>
+                    <p className="text-slate-500 font-light text-sm">Hand-selected leaves</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Heart className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Family Tradition</h4>
+                    <p className="text-slate-500 font-light text-sm">Generations of expertise</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Crown className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Premium Standards</h4>
+                    <p className="text-slate-500 font-light text-sm">Luxury craftsmanship</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-amber-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Leaf className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Tobacco Cultivation</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Our team works directly in the tobacco fields, ensuring every leaf meets our exacting standards for premium cigar production.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-amber-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Crown className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Hand-Crafted Excellence</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  From field to finished cigar, every step is overseen by our experienced team to ensure the highest quality standards.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-amber-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Heart className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Family Heritage</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Multi-generational expertise passed down through the Plasencia family, creating cigars that honor tradition while embracing innovation.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Products Section */}
+      <section className="py-24 bg-gradient-to-br from-amber-50/30 to-orange-50/20">
+        <div className="container mx-auto px-6">
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
               Premium Portfolio
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
               The complete Plasencia collection - from heritage blends to limited editions, each representing generations of tobacco expertise.
             </p>
-          </motion.div>
+                  </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -372,13 +486,13 @@ export default function Home() {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
                     <Cigarette className="text-white" size={20} />
-                  </div>
+              </div>
                   <h4 className="text-xl font-light text-slate-800">Alma del Campo</h4>
                 </div>
                 <p className="text-slate-600 font-light leading-relaxed">
                   A celebration of the field, featuring the finest Nicaraguan tobaccos with rich, complex flavors.
                 </p>
-              </div>
+          </div>
 
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
                 <div className="flex items-center mb-4">
@@ -405,11 +519,11 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
               className="relative"
             >
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
@@ -451,7 +565,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+          </motion.div>
           </div>
         </div>
       </section>
@@ -518,25 +632,29 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                     <Globe className="text-white" size={24} />
                     </div>
-                  <h3 className="text-2xl font-light text-slate-800">Digital Package</h3>
+                  <h3 className="text-2xl font-light text-slate-800">Campaign Strategy</h3>
                     </div>
                 
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
-                    <span className="text-slate-600 font-light">Digital Hub Development</span>
-                    <span className="text-2xl font-light text-slate-800">$89,200</span>
+                  <div className="bg-amber-50/50 rounded-xl p-4">
+                    <h4 className="font-medium text-slate-800 mb-2">Central Storytelling Hub</h4>
+                    <p className="text-slate-600 font-light text-sm leading-relaxed">
+                      Your complete brand narrative platform where heritage, products, and events come together in one cohesive experience.
+                    </p>
                   </div>
-                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
-                    <span className="text-slate-600 font-light">Content Creation</span>
-                    <span className="text-lg text-slate-500">Included</span>
+                  
+                  <div className="bg-amber-50/50 rounded-xl p-4">
+                    <h4 className="font-medium text-slate-800 mb-2">Sponsored Content Integration</h4>
+                    <p className="text-slate-600 font-light text-sm leading-relaxed">
+                      Editorial articles that validate your brand story with Cigar Aficionado's trusted voice and credibility.
+                    </p>
                   </div>
-                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
-                    <span className="text-slate-600 font-light">Interactive Features</span>
-                    <span className="text-lg text-slate-500">Included</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-slate-600 font-light">Analytics & Tracking</span>
-                    <span className="text-lg text-slate-500">Included</span>
+                  
+                  <div className="bg-amber-50/50 rounded-xl p-4">
+                    <h4 className="font-medium text-slate-800 mb-2">Multi-Channel Amplification</h4>
+                    <p className="text-slate-600 font-light text-sm leading-relaxed">
+                      Email, social, and display campaigns that drive traffic back to your central hub story.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -740,17 +858,17 @@ export default function Home() {
               { title: "News & Stories", desc: "Living content feed, press releases, industry recognition" },
               { title: "Experience Plasencia", desc: "Retailer locator, authorized dealers, tasting events" }
             ].map((item, index) => (
-              <motion.div
+          <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            viewport={{ once: true }}
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30"
-              >
+          >
                 <h3 className="text-lg font-light text-slate-800 mb-3">{item.title}</h3>
                 <p className="text-slate-600 font-light text-sm leading-relaxed">{item.desc}</p>
-              </motion.div>
+          </motion.div>
             ))}
           </div>
         </div>
@@ -775,11 +893,11 @@ export default function Home() {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div
+              <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+                viewport={{ once: true }}
             >
               <h3 className="text-3xl font-light text-slate-800 mb-6">The Flywheel Effect</h3>
               <div className="space-y-4">
@@ -820,7 +938,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+              </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -834,11 +952,10 @@ export default function Home() {
                   <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
                     <Mail className="text-white" size={20} />
                   </div>
-                  <h4 className="text-xl font-light text-slate-800">Email Marketing</h4>
+                  <h4 className="text-xl font-light text-slate-800">Email Campaigns</h4>
                 </div>
-                <div className="text-2xl font-light text-slate-800 mb-2">$15,000</div>
                 <p className="text-slate-600 font-light text-sm leading-relaxed">
-                  3 dedicated e-blasts to 200K+ subscribers, driving traffic to hub with compelling creative and strategic timing.
+                  Strategic e-blasts to 200K+ subscribers, driving traffic to your hub with compelling creative and perfect timing.
                 </p>
               </div>
 
@@ -847,11 +964,10 @@ export default function Home() {
                   <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
                     <Users className="text-white" size={20} />
                   </div>
-                  <h4 className="text-xl font-light text-slate-800">Cigar Watch Newsletter</h4>
+                  <h4 className="text-xl font-light text-slate-800">Premium Newsletter</h4>
                 </div>
-                <div className="text-2xl font-light text-slate-800 mb-2">$9,000</div>
                 <p className="text-slate-600 font-light text-sm leading-relaxed">
-                  2 premium placements targeting the most passionate cigar aficionados with strategic hub content.
+                  Targeted placements reaching the most passionate cigar enthusiasts with strategic hub content highlights.
                 </p>
               </div>
 
@@ -862,9 +978,8 @@ export default function Home() {
                   </div>
                   <h4 className="text-xl font-light text-slate-800">Social & Display</h4>
                 </div>
-                <div className="text-2xl font-light text-slate-800 mb-2">~$20,000</div>
                 <p className="text-slate-600 font-light text-sm leading-relaxed">
-                  Year-long integrated campaign across social media and programmatic display, all driving to hub.
+                  Year-long integrated campaign across social media and programmatic display, all driving to your central hub story.
                 </p>
               </div>
             </motion.div>
@@ -948,10 +1063,10 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                  <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center bg-transparent">
                     <span className="text-white font-bold text-lg">P</span>
-                  </div>
+              </div>
                 </div>
                 <div>
                   <div className="text-xl font-bold">PLASENCIA</div>
