@@ -83,40 +83,40 @@ export default function Home() {
 
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
               className="text-center lg:text-left"
             >
               {/* Plasencia & Cigar Aficionado Logos */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="mb-8"
               >
                 <div className="flex justify-center lg:justify-start items-center space-x-8">
                   <img 
                     src="/images/plasencia-cigars-logo__1_-removebg-preview.png" 
                     alt="Plasencia Cigars Logo" 
-                    className="w-24 h-24 object-contain"
+                    className="w-32 h-32 object-contain"
                     style={{ background: 'transparent' }}
                   />
-                  <div className="text-2xl font-light text-slate-600">×</div>
+                  <div className="text-3xl font-light text-slate-600">×</div>
                   <img 
                     src="/images/images__13_-removebg-preview.png" 
                     alt="Cigar Aficionado Logo" 
-                    className="w-24 h-24 object-contain"
+                    className="w-32 h-32 object-contain"
                     style={{ background: 'transparent' }}
                   />
-                </div>
-              </motion.div>
+            </div>
+          </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 className="inline-block bg-gradient-to-r from-amber-600 to-orange-700 text-white px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg"
               >
                 ✨ 2026 Premium Marketing Program
