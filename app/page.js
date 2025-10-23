@@ -100,14 +100,14 @@ export default function Home() {
                   <img 
                     src="/images/plasencia-cigars-logo__1_-removebg-preview.png" 
                     alt="Plasencia Cigars Logo" 
-                    className="w-32 h-32 object-contain"
+                    className="w-40 h-40 object-contain"
                     style={{ background: 'transparent' }}
                   />
-                  <div className="text-3xl font-light text-slate-600">×</div>
+                  <div className="text-4xl font-light text-slate-600">×</div>
                   <img 
                     src="/images/images__13_-removebg-preview.png" 
                     alt="Cigar Aficionado Logo" 
-                    className="w-32 h-32 object-contain"
+                    className="w-40 h-40 object-contain"
                     style={{ background: 'transparent' }}
                   />
             </div>
