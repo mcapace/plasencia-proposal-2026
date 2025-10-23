@@ -68,6 +68,14 @@ export default function Home() {
         {/* Tobacco Field Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-green-100/30 via-amber-50/20 to-orange-50/10"></div>
+          {/* Tobacco Field Team Photo as Background */}
+          <div className="absolute inset-0 opacity-10">
+            <img 
+              src="/images/Plasencia-brothers-tobaccoplants.jpg" 
+              alt="Plasencia team in tobacco field" 
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div className="absolute top-20 left-10 w-96 h-96 bg-green-200/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-stone-200/10 rounded-full blur-2xl animate-pulse delay-500"></div>
@@ -89,17 +97,19 @@ export default function Home() {
                 className="mb-8"
               >
                 <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-xl border border-amber-200/50">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
-                    <div className="w-12 h-12 border-4 border-black rounded-full flex items-center justify-center bg-transparent">
-                      <span className="text-black font-bold text-2xl">P</span>
-                    </div>
+                  <div className="w-20 h-20 flex items-center justify-center">
+                    <img 
+                      src="/images/plasencia-cigars-logo (1).jpg" 
+                      alt="Plasencia Cigars Logo" 
+                      className="w-16 h-16 object-contain"
+                    />
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-slate-800 tracking-wide">PLASENCIA</div>
                     <div className="text-sm text-slate-600 font-bold tracking-wider">CIGARS</div>
                   </div>
-            </div>
-          </motion.div>
+                </div>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -376,6 +386,15 @@ export default function Home() {
                   </p>
                 </div>
                 
+                {/* Tobacco Field Team Photo */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/Plasencia-brothers-tobaccoplants.jpg" 
+                    alt="Plasencia team in tobacco field" 
+                    className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                  />
+                </div>
+                
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
@@ -519,11 +538,11 @@ export default function Home() {
               </div>
             </motion.div>
 
-          <motion.div
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="relative"
             >
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
@@ -532,6 +551,15 @@ export default function Home() {
                   <p className="text-slate-600 font-light leading-relaxed">
                     Each cigar represents generations of expertise, from tobacco cultivation to the final hand-rolled masterpiece.
                   </p>
+                </div>
+                
+                {/* Cigar Product Image */}
+                <div className="mb-6">
+                  <img 
+                    src="/images/Plasencia_Ehtefal_1022_Detail_13-scaled.jpg" 
+                    alt="Plasencia Premium Cigars" 
+                    className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                  />
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -565,7 +593,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-          </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -1063,10 +1091,12 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center">
-                  <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center bg-transparent">
-                    <span className="text-white font-bold text-lg">P</span>
-              </div>
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <img 
+                    src="/images/plasencia-cigars-logo (1).jpg" 
+                    alt="Plasencia Cigars Logo" 
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
                 <div>
                   <div className="text-xl font-bold">PLASENCIA</div>
