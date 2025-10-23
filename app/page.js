@@ -65,10 +65,11 @@ export default function Home() {
         style={{ opacity, scale }}
         className="min-h-screen flex items-center justify-center relative overflow-hidden px-4"
       >
-        {/* Elegant Background Elements */}
+        {/* Tobacco Field Background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-green-100/30 via-amber-50/20 to-orange-50/10"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-green-200/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-stone-200/10 rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
 
@@ -88,15 +89,17 @@ export default function Home() {
                 className="mb-8"
               >
                 <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-xl border border-amber-200/50">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-700 to-orange-800 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-2xl">P</span>
+                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 border-4 border-white rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-2xl">P</span>
+                    </div>
                   </div>
                   <div>
-                    <div className="text-3xl font-light text-slate-800 tracking-wide">PLASENCIA</div>
-                    <div className="text-sm text-amber-700 font-medium tracking-wider">CIGARS</div>
+                    <div className="text-3xl font-bold text-slate-800 tracking-wide">PLASENCIA</div>
+                    <div className="text-sm text-slate-600 font-bold tracking-wider">CIGARS</div>
                   </div>
-            </div>
-          </motion.div>
+                </div>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -335,6 +338,120 @@ export default function Home() {
                 </p>
               </div>
           </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Products Section */}
+      <section className="py-24 bg-gradient-to-br from-amber-50/30 to-orange-50/20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Premium Portfolio
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              The complete Plasencia collection - from heritage blends to limited editions, each representing generations of tobacco expertise.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Cigarette className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Alma del Campo</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  A celebration of the field, featuring the finest Nicaraguan tobaccos with rich, complex flavors.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Crown className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Alma Fuerte</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Our most powerful blend, featuring bold Nicaraguan tobaccos with exceptional strength and character.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Gem className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Limited Editions</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Exclusive releases including Year of the Dragon and Edición Especial Qatar 22, showcasing our finest craftsmanship.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-light text-slate-800 mb-4">The Plasencia Collection</h3>
+                  <p className="text-slate-600 font-light leading-relaxed">
+                    Each cigar represents generations of expertise, from tobacco cultivation to the final hand-rolled masterpiece.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Leaf className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Premium Tobacco</h4>
+                    <p className="text-slate-500 font-light text-sm">Finest Nicaraguan leaves</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Award className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Award Winning</h4>
+                    <p className="text-slate-500 font-light text-sm">Industry recognition</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Heart className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Hand Crafted</h4>
+                    <p className="text-slate-500 font-light text-sm">Artisanal excellence</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                      <Crown className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-lg font-light text-slate-800 mb-1">Heritage</h4>
+                    <p className="text-slate-500 font-light text-sm">Multi-generational</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -831,12 +948,14 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">P</span>
-              </div>
+                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">P</span>
+                  </div>
+                </div>
                 <div>
-                  <div className="text-xl font-light">PLASENCIA</div>
-                  <div className="text-sm text-amber-300">CIGARS</div>
+                  <div className="text-xl font-bold">PLASENCIA</div>
+                  <div className="text-sm text-slate-400 font-bold">CIGARS</div>
                 </div>
               </div>
               <p className="text-slate-400 font-light leading-relaxed">
