@@ -83,9 +83,9 @@ export default function Home() {
 
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
               className="text-center lg:text-left"
             >
@@ -115,7 +115,7 @@ export default function Home() {
 
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 className="inline-block bg-gradient-to-r from-amber-600 to-orange-700 text-white px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg"
               >
@@ -141,21 +141,14 @@ export default function Home() {
               className="relative"
             >
               <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <DollarSign className="text-white" size={28} />
-              </div>
-                    <h3 className="text-2xl font-light text-slate-800 mb-2">$400K</h3>
-                    <p className="text-slate-500 font-light">Total Investment</p>
-            </div>
+                <div className="grid grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <Calendar className="text-white" size={28} />
-                    </div>
+              </div>
                     <h3 className="text-2xl font-light text-slate-800 mb-2">12</h3>
                     <p className="text-slate-500 font-light">Months</p>
-                  </div>
+            </div>
                   <div className="text-center">
                     <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <Target className="text-white" size={28} />
@@ -771,6 +764,21 @@ export default function Home() {
               <div className="text-4xl font-light text-slate-800 mb-2">$89,200</div>
               <p className="text-slate-600 font-light">Interactive platform</p>
                 </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-3xl p-8 shadow-2xl text-center"
+            >
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <DollarSign className="text-white" size={36} />
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Total Investment</h3>
+              <div className="text-4xl font-light text-white mb-2">$400,000</div>
+              <p className="text-amber-100 font-light">12-month program</p>
+            </motion.div>
 
           </div>
         </div>
