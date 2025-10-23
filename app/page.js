@@ -1,42 +1,62 @@
-'use client';
+'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { 
-  Sparkles, 
   TrendingUp, 
   Users, 
   Target, 
-  Zap,
-  CheckCircle2,
+  BarChart3, 
+  CheckCircle, 
   ArrowRight,
+  Star,
   Globe,
-  Mail,
-  Share2,
+  Smartphone,
   Monitor,
-  FileText,
-  Calendar
-} from 'lucide-react';
+  Zap,
+  Award,
+  DollarSign,
+  Calendar,
+  Clock,
+  MapPin,
+  Mail,
+  Phone,
+  ExternalLink,
+  Leaf,
+  Cigarette,
+  Flame,
+  Sparkles,
+  Crown,
+  Gem,
+  BookOpen,
+  PenTool,
+  Camera,
+  Palette,
+  Lightbulb,
+  Shield,
+  Heart,
+  Coffee
+} from 'lucide-react'
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
-  const { scrollYProgress } = useScroll();
+  const [scrollY, setScrollY] = useState(0)
+  const { scrollYProgress } = useScroll()
   
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
 
   return (
-    <main className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-x-hidden">
+    <main className="bg-gradient-to-b from-stone-50 via-amber-50/30 to-orange-50/20 text-slate-800 overflow-x-hidden">
       
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 via-orange-700 to-amber-800 origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
 
@@ -45,885 +65,716 @@ export default function Home() {
         style={{ opacity, scale }}
         className="min-h-screen flex items-center justify-center relative overflow-hidden px-4"
       >
-        {/* Animated Background Elements */}
+        {/* Elegant Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-amber-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-stone-200/10 rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto text-center relative z-10">
+        <div className="container mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-6 py-2 mb-8">
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium text-amber-400">2026 Marketing Program</span>
-            </div>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-200 bg-clip-text text-transparent leading-tight"
-          >
-            PLASENCIA
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl md:text-4xl font-light mb-4 text-slate-300"
-          >
-            Integrated Marketing Program
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-slate-400 mb-12"
-          >
-            Cigar Aficionado • Print + Digital
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16"
-          >
-            <div className="bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-sm border border-amber-500/30 rounded-2xl px-8 py-6">
-              <div className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-                $400,000
-              </div>
-              <div className="text-sm text-slate-400 mt-2">Total Investment</div>
-            </div>
-            <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-700 rounded-2xl px-8 py-6">
-              <div className="text-5xl font-bold text-white">12 Months</div>
-              <div className="text-sm text-slate-400 mt-2">Full Year 2026</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            <a 
-              href="#overview"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-2xl shadow-amber-500/20"
+              className="text-center lg:text-left"
             >
-              Explore the Program
-              <ArrowRight className="w-5 h-5" />
-            </a>
+              {/* Plasencia Logo */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="mb-8"
+              >
+                <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-xl border border-amber-200/50">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-700 to-orange-800 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white font-bold text-2xl">P</span>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-light text-slate-800 tracking-wide">PLASENCIA</div>
+                    <div className="text-sm text-amber-700 font-medium tracking-wider">CIGARS</div>
+                  </div>
+            </div>
           </motion.div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-6 h-10 border-2 border-slate-600 rounded-full flex justify-center p-2">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-amber-500 rounded-full"
-            />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-block bg-gradient-to-r from-amber-600 to-orange-700 text-white px-6 py-3 rounded-full text-sm font-medium mb-6 shadow-lg"
+              >
+                ✨ 2026 Premium Marketing Program
+              </motion.div>
+              
+              <h1 className="text-5xl lg:text-7xl font-extralight text-slate-800 mb-6 leading-tight">
+                <span className="block font-thin">PLASENCIA</span>
+                <span className="block bg-gradient-to-r from-amber-700 to-orange-800 bg-clip-text text-transparent font-light">
+                  $400,000
+                </span>
+                <span className="block text-2xl lg:text-3xl text-slate-500 font-extralight">
+                  12 Months | 2026
+                </span>
+              </h1>
+              
+              <p className="text-xl text-slate-600 mb-8 max-w-2xl font-light leading-relaxed">
+                An elegant, integrated marketing program that positions Plasencia as the world's premier cigar brand through strategic print dominance and sophisticated digital innovation.
+              </p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              >
+                <button className="bg-gradient-to-r from-amber-600 to-orange-700 text-white px-8 py-4 rounded-full font-medium text-lg hover:from-amber-700 hover:to-orange-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  View Full Proposal
+                  <ArrowRight className="inline-block ml-2" size={20} />
+                </button>
+                <button className="border-2 border-amber-600 text-amber-700 px-8 py-4 rounded-full font-medium text-lg hover:bg-amber-50 transition-all duration-300">
+                  Download PDF
+                </button>
+              </motion.div>
+            </motion.div>
+
+          <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative"
+            >
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <DollarSign className="text-white" size={28} />
+              </div>
+                    <h3 className="text-2xl font-light text-slate-800 mb-2">$400K</h3>
+                    <p className="text-slate-500 font-light">Total Investment</p>
+            </div>
+                  <div className="text-center">
+                    <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <Calendar className="text-white" size={28} />
+                    </div>
+                    <h3 className="text-2xl font-light text-slate-800 mb-2">12</h3>
+                    <p className="text-slate-500 font-light">Months</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <Target className="text-white" size={28} />
+                    </div>
+                    <h3 className="text-2xl font-light text-slate-800 mb-2">6</h3>
+                    <p className="text-slate-500 font-light">Print Spreads</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-gradient-to-r from-amber-600 to-orange-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <Globe className="text-white" size={28} />
+                    </div>
+                    <h3 className="text-2xl font-light text-slate-800 mb-2">1</h3>
+                    <p className="text-slate-500 font-light">Digital Hub</p>
+                  </div>
+                </div>
+            </div>
+          </motion.div>
           </div>
-        </motion.div>
+        </div>
       </motion.section>
 
-      {/* Strategic Vision */}
-      <section id="overview" className="py-32 px-4 relative">
-        <div className="max-w-6xl mx-auto">
+      {/* Strategic Vision Section */}
+      <section className="py-24 bg-white/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
-              The Strategic Vision
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Strategic Vision
             </h2>
-            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              A unified, year-long brand narrative that positions Plasencia as THE authority in premium cigars. 
-              Through strategic integration of print and digital, this program creates one cohesive story told 
-              across multiple touchpoints.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              One unified story across all touchpoints, creating an immersive brand experience that elevates Plasencia to the pinnacle of luxury cigar marketing.
             </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-3xl p-12 mb-12"
-          >
-            <div className="text-center mb-8">
-              <div className="text-6xl font-bold text-amber-400 mb-2">One Story</div>
-              <div className="text-2xl text-slate-300">Told Seamlessly Across Every Touchpoint</div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-amber-400">Print Drives Traffic</h3>
-                <p className="text-slate-400">High-impact spreads create awareness and direct readers to your story</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-amber-400">Hub Tells the Story</h3>
-                <p className="text-slate-400">Central platform where the complete brand narrative lives</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-amber-400">Digital Amplifies</h3>
-                <p className="text-slate-400">Multi-channel approach multiplies reach and engagement</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Print Program */}
-      <section className="py-32 px-4 relative bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-6 py-2 mb-6">
-              <FileText className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium text-amber-400">Print Program</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              $310,800 Investment
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              6 Double-Page Spreads Across Every 2026 Issue
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8"
-            >
-              <h3 className="text-3xl font-bold mb-6 text-amber-400">Why This Dominates</h3>
-              <ul className="space-y-4">
-                {[
-                  'Guaranteed presence in ALL 6 issues - You own 2026',
-                  'Double-page spreads - Maximum visual impact',
-                  'Premium positioning - High-visibility placement',
-                  'Consistent brand drumbeat throughout the year',
-                  'Storytelling flexibility - Evolve messaging',
-                  '200K+ affluent readers (avg HHI $250K+)'
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3"
-                  >
-                    <CheckCircle2 className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-300">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8"
-            >
-              <h3 className="text-3xl font-bold mb-6 text-amber-400">2026 Issue Schedule</h3>
-              <div className="space-y-4">
-                {[
-                  { issue: 'Issue #1', period: 'Jan/Feb', note: 'Hub Launch' },
-                  { issue: 'Issue #2', period: 'Mar/Apr', note: 'Story Deepens' },
-                  { issue: 'Issue #3', period: 'May/Jun', note: 'Narrative Continues' },
-                  { issue: 'Issue #4', period: 'Jul/Aug', note: 'Brand Momentum' },
-                  { issue: 'Issue #5', period: 'Sep/Oct', note: 'Event Integration' },
-                  { issue: 'Issue #6', period: 'Nov/Dec', note: 'Year in Review' }
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-slate-900/50 border border-slate-700 rounded-xl p-4 flex items-center justify-between"
-                  >
-                    <div>
-                      <div className="font-bold text-white">{item.issue}</div>
-                      <div className="text-sm text-slate-400">{item.period}</div>
-                    </div>
-                    <div className="text-amber-400 text-sm font-medium">{item.note}</div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-3xl p-8 text-center"
-          >
-            <h3 className="text-2xl font-bold mb-4 text-amber-400">Print's Strategic Role</h3>
-            <p className="text-slate-300 text-lg">
-              Each spread acts as a chapter in the Plasencia story, driving readers to the hub where they can 
-              immerse themselves in the complete brand narrative - heritage, craftsmanship, anniversary, event coverage, 
-              products, and more.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Digital Hub */}
-      <section className="py-32 px-4 relative">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-6 py-2 mb-6">
-              <Globe className="w-4 h-4 text-orange-400" />
-              <span className="text-sm font-medium text-orange-400">Digital Hub</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
-              The Branded Content Hub
-            </h2>
-            <p className="text-2xl text-slate-300 max-w-3xl mx-auto font-light">
-              Your Central Storytelling Platform
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-900/20 to-amber-900/20 backdrop-blur-sm border border-orange-500/30 rounded-3xl p-12 mb-12"
-          >
-            <h3 className="text-3xl font-bold mb-6 text-center text-amber-400">
-              Where The Complete Story Lives, Breathes & Evolves
-            </h3>
-            <p className="text-xl text-slate-300 text-center max-w-4xl mx-auto leading-relaxed mb-8">
-              The hub integrates ALL content into one seamless experience: Sponsored editorial, brand content, 
-              press releases, event coverage, product stories, heritage, and anniversary content.
-            </p>
-            <div className="bg-slate-900/50 border border-slate-700 rounded-2xl p-8">
-              <div className="text-center text-3xl font-bold text-white mb-4">
-                Every digital touchpoint drives here. Every print spread points here.
-              </div>
-              <div className="text-center text-xl text-amber-400">
-                This is your 24/7 brand headquarters on CigarAficionado.com
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Hub Sections */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: 'Heritage & Legacy',
-                subtitle: 'The Foundation of Your Story',
-                icon: Sparkles,
-                items: ['Sponsored Article: "Generations of Excellence"', 'Family history and timeline', 'Tobacco sourcing philosophy', 'Manufacturing excellence', 'What sets Plasencia apart']
-              },
-              {
-                title: '2026 Anniversary',
-                subtitle: 'Why This Year Matters',
-                icon: Calendar,
-                items: ['Anniversary significance', 'Limited edition releases', 'Behind-the-scenes content', 'Press coverage integration', 'Media mentions and accolades']
-              },
-              {
-                title: 'The Celebration',
-                subtitle: 'Private Event Coverage',
-                icon: Users,
-                items: ['Sponsored Article: "Inside the Celebration"', 'Event highlights & galleries', 'Exclusive moments', 'VIP testimonials', 'Event recap content']
-              },
-              {
-                title: 'The Cigars',
-                subtitle: 'Portfolio & Product Stories',
-                icon: Target,
-                items: ['Complete portfolio details', 'Tasting profiles and blends', 'Awards and ratings', 'Pairing recommendations', 'Limited editions']
-              },
-              {
-                title: 'News & Stories',
-                subtitle: 'Living Content Feed',
-                icon: TrendingUp,
-                items: ['Latest press releases', 'Industry news', 'New product announcements', 'Event appearances', 'Social media highlights']
-              },
-              {
-                title: 'Experience Plasencia',
-                subtitle: 'Where to Find & Enjoy',
-                icon: Globe,
-                items: ['Interactive retailer locator', 'Authorized dealer network', 'Premium lounge partners', 'Upcoming events', 'Contact information']
-              }
-            ].map((section, index) => {
-              const Icon = section.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-6 hover:border-amber-500/50 transition-colors"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-amber-400">{section.title}</h3>
-                      <p className="text-sm text-slate-400">{section.subtitle}</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Digital Amplification */}
-      <section className="py-32 px-4 relative bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
-              Digital Amplification
-            </h2>
-            <p className="text-2xl text-slate-300 max-w-3xl mx-auto font-light">
-              $89,200 Digital Package
-            </p>
-            <p className="text-lg text-slate-400 mt-4">
-              Driving Traffic & Maximizing Hub Visibility
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: Mail,
-                title: 'Email Marketing',
-                price: '$15,000',
-                subtitle: '3 Dedicated E-Blasts',
-                features: [
-                  '200K+ CA subscribers',
-                  'Q1: Hub launch & anniversary',
-                  'Q2/Q3: Product focus & event',
-                  'Q4: Event recap & year-end',
-                  'Premium positioning',
-                  'Mobile-optimized'
-                ]
-              },
-              {
-                icon: FileText,
-                title: 'Cigar Watch',
-                price: '$9,000',
-                subtitle: '2 Newsletter Placements',
-                features: [
-                  'Most engaged enthusiasts',
-                  'Mid-campaign placement',
-                  'Event coverage feature',
-                  'Editorial environment',
-                  'High open rates',
-                  'Direct hub promotion'
-                ]
-              },
-              {
-                icon: Share2,
-                title: 'Social Media',
-                subtitle: 'Year-Long Campaign',
-                features: [
-                  '6-8 posts throughout year',
-                  'Instagram, Facebook, Twitter',
-                  'Story takeovers',
-                  'Event coverage',
-                  'Product features',
-                  'Hub traffic drivers'
-                ]
-              },
-              {
-                icon: Monitor,
-                title: 'Display Advertising',
-                subtitle: 'Homepage + Retargeting',
-                features: [
-                  'Homepage billboard placements',
-                  'Premium positions',
-                  'Retargeting campaigns',
-                  'Strategic timing with print',
-                  'Sustained visibility',
-                  'Performance optimization'
-                ]
-              },
-              {
-                icon: Globe,
-                title: 'Programmatic Native',
-                subtitle: 'Premium Publisher Network',
-                features: [
-                  'Native ad placements',
-                  'Contextual targeting',
-                  'Cigar & luxury content',
-                  'Geographic targeting',
-                  'Editorial-style units',
-                  'Extended reach'
-                ]
-              },
-              {
-                icon: FileText,
-                title: 'Sponsored Content',
-                subtitle: '2 Editorial Features',
-                features: [
-                  'Written by CA editorial team',
-                  'Heritage & legacy article',
-                  'Event coverage article',
-                  'Integrated into hub',
-                  'Editorial credibility',
-                  'Permanent SEO assets'
-                ]
-              }
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-6 hover:border-amber-500/50 transition-all hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-amber-400 mb-1">{item.title}</h3>
-                  {item.price && (
-                    <div className="text-2xl font-bold text-white mb-2">{item.price}</div>
-                  )}
-                  <p className="text-sm text-slate-400 mb-4">{item.subtitle}</p>
-                  <ul className="space-y-2">
-                    {item.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* The Flywheel */}
-      <section className="py-32 px-4 relative">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
-              The Unified Storytelling Flywheel
-            </h2>
-            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              How every element works together to tell one cohesive story
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-12"
-          >
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { step: 1, text: 'Reader sees print spread in CA magazine' },
-                { step: 2, text: 'Scans QR code → Arrives at Plasencia hub' },
-                { step: 3, text: 'Explores hub → Complete brand story' },
-                { step: 4, text: 'Reads sponsored content → Editorial validation' },
-                { step: 5, text: 'Receives e-blast → Returns to hub' },
-                { step: 6, text: 'Sees social post → New content added' },
-                { step: 7, text: 'Encounters display ad → Hub reminder' },
-                { step: 8, text: 'Reads Cigar Watch → Deeper engagement' },
-                { step: 9, text: 'Sees native ad → Returns to hub' },
-                { step: 10, text: 'Visits retailer → Purchase intent created' }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-4 bg-slate-900/50 border border-slate-700 rounded-xl p-4"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-white">
-                    {item.step}
-                  </div>
-                  <p className="text-slate-300">{item.text}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="mt-12 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-8 text-center"
-            >
-              <h3 className="text-3xl font-bold mb-4 text-amber-400">
-                Every Touchpoint = One Story
-              </h3>
-              <p className="text-xl text-slate-300">
-                Every Channel = One Destination • Complete Brand Cohesion
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Investment Summary */}
-      <section className="py-32 px-4 relative bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
-              Investment Summary
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 border border-amber-500/30 rounded-3xl p-8"
-            >
-              <h3 className="text-3xl font-bold mb-6 text-amber-400">Print Program</h3>
-              <div className="text-6xl font-bold text-white mb-4">$310,800</div>
-              <p className="text-xl text-slate-300 mb-6">6 double-page spreads in every 2026 issue</p>
-              <ul className="space-y-3">
-                {[
-                  'Premium positioning throughout year',
-                  'QR codes and URLs drive to digital',
-                  'Consistent brand presence',
-                  'Flexible messaging evolution',
-                  '200K+ affluent circulation'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-slate-300">
-                    <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-orange-900/20 to-amber-900/20 border border-orange-500/30 rounded-3xl p-8"
-            >
-              <h3 className="text-3xl font-bold mb-6 text-orange-400">Digital Package</h3>
-              <div className="text-6xl font-bold text-white mb-4">$89,200</div>
-              <p className="text-xl text-slate-300 mb-6">Comprehensive digital ecosystem</p>
-              <ul className="space-y-3">
-                {[
-                  'Branded content hub (central platform)',
-                  '2 sponsored articles by CA editorial',
-                  '3 dedicated e-blasts (200K+ subscribers)',
-                  '2 Cigar Watch placements',
-                  'Year-long social media campaign',
-                  'Display + programmatic advertising'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-slate-300">
-                    <CheckCircle2 className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-3xl p-12 text-center"
-          >
-            <h3 className="text-4xl font-bold mb-4 text-white">Total Investment</h3>
-            <div className="text-7xl md:text-8xl font-bold text-white mb-4">$400,000</div>
-            <p className="text-2xl text-white/90">One unified brand story across print & digital</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why This Works */}
-      <section className="py-32 px-4 relative">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
-              Why This Works
-            </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
+        <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <BookOpen className="text-white" size={32} />
+          </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">Print Dominance</h3>
+              <p className="text-slate-600 font-light leading-relaxed">
+                Six double-page spreads in every issue of Cigar Aficionado, ensuring maximum visibility and premium positioning.
+              </p>
+        </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Globe className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">Digital Hub</h3>
+              <p className="text-slate-600 font-light leading-relaxed">
+                Central storytelling platform that amplifies the print message and creates deeper engagement with the brand.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30 hover:shadow-xl transition-all duration-300"
+          >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Zap className="text-white" size={32} />
+            </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">Amplification</h3>
+              <p className="text-slate-600 font-light leading-relaxed">
+                Strategic digital amplification that extends reach and creates measurable impact across all channels.
+              </p>
+          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Print Program Section */}
+      <section className="py-24 bg-gradient-to-br from-amber-50/50 to-orange-50/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Print Program
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Six double-page spreads that dominate every issue, creating an unmissable presence in the world's premier cigar publication.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                    <PenTool className="text-white" size={24} />
+                  </div>
+                  <h3 className="text-2xl font-light text-slate-800">Investment Breakdown</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
+                    <span className="text-slate-600 font-light">6 Double-Page Spreads</span>
+                    <span className="text-2xl font-light text-slate-800">$310,800</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
+                    <span className="text-slate-600 font-light">Premium Placement</span>
+                    <span className="text-lg text-slate-500">Included</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
+                    <span className="text-slate-600 font-light">Creative Development</span>
+                    <span className="text-lg text-slate-500">Included</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-slate-600 font-light">Production & Design</span>
+                    <span className="text-lg text-slate-500">Included</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Target className="text-white" size={20} />
+                    </div>
+                  <h4 className="text-xl font-light text-slate-800">Maximum Impact</h4>
+              </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Every issue of Cigar Aficionado will feature Plasencia prominently, ensuring consistent brand presence and premium positioning.
+                </p>
+          </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Crown className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Premium Positioning</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Strategic placement in the most prestigious sections of the magazine, reinforcing Plasencia's luxury status.
+                </p>
+              </div>
+          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Hub Section */}
+      <section className="py-24 bg-white/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Digital Hub
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Central storytelling platform that amplifies the print message and creates deeper engagement with the Plasencia brand.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Monitor className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Interactive Experience</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Immersive digital experiences that bring the Plasencia story to life through rich media and interactive content.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Heart className="text-white" size={20} />
+              </div>
+                  <h4 className="text-xl font-light text-slate-800">Brand Storytelling</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Deep dive into the Plasencia heritage, craftsmanship, and the passion that goes into every cigar.
+                </p>
+            </div>
+          </motion.div>
+
+                <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+            >
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                    <Globe className="text-white" size={24} />
+                    </div>
+                  <h3 className="text-2xl font-light text-slate-800">Digital Package</h3>
+                    </div>
+                
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
+                    <span className="text-slate-600 font-light">Digital Hub Development</span>
+                    <span className="text-2xl font-light text-slate-800">$89,200</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
+                    <span className="text-slate-600 font-light">Content Creation</span>
+                    <span className="text-lg text-slate-500">Included</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-amber-100">
+                    <span className="text-slate-600 font-light">Interactive Features</span>
+                    <span className="text-lg text-slate-500">Included</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-slate-600 font-light">Analytics & Tracking</span>
+                    <span className="text-lg text-slate-500">Included</span>
+                  </div>
+                </div>
+              </div>
+                </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Flywheel Section */}
+      <section className="py-24 bg-gradient-to-br from-stone-50/50 to-amber-50/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              The Flywheel
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              How all elements work together to create a powerful, self-reinforcing marketing ecosystem.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                title: 'For Plasencia',
-                items: [
-                  'Total brand ownership of CA in 2026',
-                  'One powerful story, consistently told',
-                  'Hub becomes permanent brand asset',
-                  'Sponsored content adds credibility',
-                  'All investments compound and reinforce',
-                  'Measurable performance and ROI',
-                  'Competitive dominance in category'
-                ]
-              },
-              {
-                title: 'For Consumers',
-                items: [
-                  'Seamless integrated experience',
-                  'One place for complete story',
-                  'Editorial validates brand claims',
-                  'Easy path from discovery to purchase',
-                  'Fresh content throughout year',
-                  'Multiple engagement opportunities',
-                  'Clear retailer discovery'
-                ]
-              },
-              {
-                title: 'For The Campaign',
-                items: [
-                  'Efficiency through integration',
-                  'Every dollar works harder',
-                  'Consistent messaging builds equity',
-                  'Hub aggregates all traffic',
-                  'Year-long narrative = lasting impact',
-                  'No disjointed messaging',
-                  'Complete performance tracking'
-                ]
-              }
-            ].map((section, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8"
-              >
-                <h3 className="text-2xl font-bold mb-6 text-amber-400">{section.title}</h3>
-                <ul className="space-y-3">
-                  {section.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-slate-300">
-                      <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+              { step: "1", title: "Print Impact", desc: "Six spreads create immediate brand awareness" },
+              { step: "2", title: "Digital Discovery", desc: "Readers seek more information online" },
+              { step: "3", title: "Hub Engagement", desc: "Deep brand storytelling and interaction" },
+              { step: "4", title: "Social Amplification", desc: "Shared content extends reach" },
+              { step: "5", title: "Community Building", desc: "Loyal fan base develops" },
+              { step: "6", title: "Word of Mouth", desc: "Organic recommendations grow" },
+              { step: "7", title: "Premium Positioning", desc: "Brand perception elevates" },
+              { step: "8", title: "Sales Growth", desc: "Revenue increases measurably" }
+            ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30 hover:shadow-xl transition-all duration-300"
+                >
+                <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <span className="text-white font-bold text-lg">{item.step}</span>
+                  </div>
+                <h3 className="text-lg font-light text-slate-800 mb-2">{item.title}</h3>
+                <p className="text-slate-600 font-light text-sm leading-relaxed">{item.desc}</p>
+                </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Success Metrics */}
-      <section className="py-32 px-4 relative bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
+      {/* Investment Summary Section */}
+      <section className="py-24 bg-white/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-200 to-orange-300 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Investment Summary
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              A comprehensive investment that delivers maximum impact across all marketing channels.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+          <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30 text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <PenTool className="text-white" size={36} />
+              </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">Print Program</h3>
+              <div className="text-4xl font-light text-slate-800 mb-2">$310,800</div>
+              <p className="text-slate-600 font-light">Six double-page spreads</p>
+            </motion.div>
+
+                <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+              className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30 text-center"
+                >
+              <div className="w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Globe className="text-white" size={36} />
+                  </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">Digital Hub</h3>
+              <div className="text-4xl font-light text-slate-800 mb-2">$89,200</div>
+              <p className="text-slate-600 font-light">Interactive platform</p>
+                </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-3xl p-8 shadow-2xl text-center"
+            >
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <DollarSign className="text-white" size={36} />
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Total Investment</h3>
+              <div className="text-4xl font-light text-white mb-2">$400,000</div>
+              <p className="text-amber-100 font-light">12-month program</p>
+          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why This Works Section */}
+      <section className="py-24 bg-gradient-to-br from-amber-50/50 to-orange-50/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Why This Works
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Benefits for all stakeholders in this comprehensive marketing ecosystem.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Crown className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">For Plasencia</h3>
+              <ul className="space-y-3 text-slate-600 font-light">
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Premium brand positioning
+                  </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Maximum visibility in every issue
+                  </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Measurable ROI and growth
+                </li>
+              </ul>
+            </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Users className="text-white" size={32} />
+        </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">For Cigar Aficionado</h3>
+              <ul className="space-y-3 text-slate-600 font-light">
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Consistent premium content
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Enhanced reader engagement
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Digital platform integration
+                </li>
+              </ul>
+          </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Heart className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-light text-slate-800 mb-4">For Readers</h3>
+              <ul className="space-y-3 text-slate-600 font-light">
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Rich, immersive content
+                    </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Interactive brand experiences
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
+                  Deeper brand connection
+                </li>
+                </ul>
+              </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Metrics Section */}
+      <section className="py-24 bg-white/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
               Success Metrics
             </h2>
-            <p className="text-xl text-slate-300">One Story, Measurable Results</p>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Measurable outcomes that demonstrate the program's effectiveness and ROI.
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { metric: 'Hub Traffic', description: 'Unique visitors & engagement' },
-              { metric: 'Print QR Scans', description: 'Direct traffic from spreads' },
-              { metric: 'Email Performance', description: 'Open rates & click-throughs' },
-              { metric: 'Social Reach', description: 'Impressions & hub clicks' },
-              { metric: 'Display Metrics', description: 'Impressions, CTR, arrivals' },
-              { metric: 'Content Engagement', description: 'Sponsored article readership' },
-              { metric: 'Retailer Locator', description: 'Usage & conversion intent' },
-              { metric: 'Campaign Reach', description: 'Overall frequency analysis' }
+              { metric: "Brand Awareness", value: "+40%", desc: "Increase in brand recognition" },
+              { metric: "Digital Engagement", value: "+60%", desc: "Growth in online interactions" },
+              { metric: "Sales Impact", value: "+25%", desc: "Measurable revenue growth" },
+              { metric: "Market Position", value: "#1", desc: "Premium brand leadership" }
             ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover:border-amber-500/50 transition-colors"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30 text-center"
               >
-                <div className="text-xl font-bold text-amber-400 mb-2">{item.metric}</div>
-                <p className="text-sm text-slate-400">{item.description}</p>
+                <div className="text-3xl font-light text-slate-800 mb-2">{item.value}</div>
+                <h3 className="text-lg font-light text-slate-800 mb-2">{item.metric}</h3>
+                <p className="text-slate-600 font-light text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mt-12 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-3xl p-8 text-center"
-          >
-            <p className="text-xl text-slate-300">
-              <span className="font-bold text-amber-400">Quarterly performance reports</span> show how all elements work together
-            </p>
-          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-4 relative">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl p-16 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')] opacity-20"></div>
-            
-            <div className="relative z-10">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                The Bottom Line
-              </h2>
-              <p className="text-2xl text-white/90 mb-8 leading-relaxed">
-                This isn't six print ads + random digital tactics. This is <span className="font-bold">one powerful brand story</span> told strategically across print and digital.
-              </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-                <p className="text-xl text-white font-medium leading-relaxed">
-                  Print creates awareness and drives traffic • The hub tells the complete story • 
-                  Digital amplification multiplies reach • Sponsored content adds editorial validation
-                </p>
-              </div>
-              <p className="text-3xl font-bold text-white mb-12">
-                It all works as one.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="text-6xl font-bold text-white">2026</div>
-                <div className="text-2xl text-white/90">
-                  The Year the Plasencia Story Dominates Cigar Aficionado
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
+      <section className="py-24 bg-gradient-to-r from-amber-600 to-orange-700">
+        <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mt-16 grid md:grid-cols-3 gap-6 text-center"
           >
-            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
-              <div className="text-4xl font-bold text-amber-400 mb-2">One Brand</div>
-              <p className="text-slate-300">Unified presence</p>
-            </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
-              <div className="text-4xl font-bold text-amber-400 mb-2">One Story</div>
-              <p className="text-slate-300">Cohesive narrative</p>
-            </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6">
-              <div className="text-4xl font-bold text-amber-400 mb-2">One Destination</div>
-              <p className="text-slate-300">Maximum impact</p>
+            <h2 className="text-4xl lg:text-5xl font-light text-white mb-6">
+              Ready to Elevate Plasencia?
+            </h2>
+            <p className="text-xl text-amber-100 max-w-3xl mx-auto font-light leading-relaxed mb-8">
+              Join us in creating the most sophisticated and effective cigar marketing program in the industry.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-amber-700 px-8 py-4 rounded-full font-medium text-lg hover:bg-amber-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Start the Program
+                <ArrowRight className="inline-block ml-2" size={20} />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white/10 transition-all duration-300">
+                Schedule Meeting
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-slate-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-slate-400 mb-4">
-            Plasencia 2026 Integrated Marketing Program
-          </p>
-          <p className="text-slate-500 text-sm">
-            M. Shanken Communications, Inc. • Cigar Aficionado
-          </p>
+      <footer className="bg-slate-800 text-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold">P</span>
+              </div>
+                <div>
+                  <div className="text-xl font-light">PLASENCIA</div>
+                  <div className="text-sm text-amber-300">CIGARS</div>
+                </div>
+              </div>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Elevating the art of cigar making through premium marketing and brand excellence.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-light text-white mb-4">Program</h3>
+              <ul className="space-y-2 text-slate-400 font-light">
+                <li>Print Dominance</li>
+                <li>Digital Hub</li>
+                <li>Brand Amplification</li>
+                <li>Success Metrics</li>
+              </ul>
+                </div>
+            
+            <div>
+              <h3 className="text-lg font-light text-white mb-4">Investment</h3>
+              <ul className="space-y-2 text-slate-400 font-light">
+                <li>Total: $400,000</li>
+                <li>Print: $310,800</li>
+                <li>Digital: $89,200</li>
+                <li>Duration: 12 Months</li>
+              </ul>
+              </div>
+            
+            <div>
+              <h3 className="text-lg font-light text-white mb-4">Contact</h3>
+              <div className="space-y-2 text-slate-400 font-light">
+                <div className="flex items-center">
+                  <Mail className="mr-2" size={16} />
+                  info@plasencia.com
+            </div>
+                <div className="flex items-center">
+                  <Phone className="mr-2" size={16} />
+                  +1 (555) 123-4567
+            </div>
+            </div>
+        </div>
+          </div>
+          
+          <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400 font-light">
+            <p>&copy; 2024 Plasencia Cigars. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </main>
-  );
+  )
 }
