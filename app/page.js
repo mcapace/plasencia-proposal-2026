@@ -543,7 +543,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why This Works Section */}
+      {/* The Unified Story Section */}
       <section className="py-24 bg-gradient-to-br from-amber-50/50 to-orange-50/30">
         <div className="container mx-auto px-6">
           <motion.div
@@ -554,94 +554,203 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-              Why This Works
+              The Unified Story
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              Benefits for all stakeholders in this comprehensive marketing ecosystem.
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed">
+              One powerful brand narrative told strategically across print and digital, with the hub serving as your central storytelling platform where everything comes together.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30"
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Crown className="text-white" size={32} />
+              <h3 className="text-3xl font-light text-slate-800 mb-6">The Strategic Vision</h3>
+              <p className="text-lg text-slate-600 font-light leading-relaxed mb-6">
+                A unified, year-long brand narrative that positions Plasencia as THE authority in premium cigars. Through strategic integration of print and digital, this program creates one cohesive story told across multiple touchpoints.
+              </p>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="text-center">
+                  <div className="text-2xl font-light text-slate-800 mb-2">The Hub is Your Story</div>
+                  <div className="text-lg text-amber-700 font-medium">Print Drives the Audience</div>
+                  <div className="text-lg text-orange-700 font-medium">Digital Amplifies the Reach</div>
+                </div>
               </div>
-              <h3 className="text-2xl font-light text-slate-800 mb-4">For Plasencia</h3>
-              <ul className="space-y-3 text-slate-600 font-light">
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Premium brand positioning
-                  </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Maximum visibility in every issue
-                  </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Measurable ROI and growth
-                </li>
-              </ul>
             </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <BookOpen className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Print Program</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  6 double-page spreads across all 6 issues, driving qualified traffic to the branded content hub with QR codes and custom URLs.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Globe className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Digital Hub</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Central storytelling platform where the complete Plasencia story lives, breathes, and evolves throughout 2026.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Heritage & Legacy", desc: "Family history, tobacco expertise, multi-generational craftsmanship" },
+              { title: "2026 Anniversary", desc: "Milestone achievements, limited editions, exclusive content" },
+              { title: "The Celebration", desc: "Event coverage, VIP testimonials, behind-the-scenes access" },
+              { title: "The Cigars", desc: "Complete portfolio, tasting profiles, awards and acclaim" },
+              { title: "News & Stories", desc: "Living content feed, press releases, industry recognition" },
+              { title: "Experience Plasencia", desc: "Retailer locator, authorized dealers, tasting events" }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30"
+              >
+                <h3 className="text-lg font-light text-slate-800 mb-3">{item.title}</h3>
+                <p className="text-slate-600 font-light text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Amplification Section */}
+      <section className="py-24 bg-gradient-to-br from-stone-50/50 to-amber-50/30">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Users className="text-white" size={32} />
-        </div>
-              <h3 className="text-2xl font-light text-slate-800 mb-4">For Cigar Aficionado</h3>
-              <ul className="space-y-3 text-slate-600 font-light">
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Consistent premium content
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Enhanced reader engagement
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Digital platform integration
-                </li>
-              </ul>
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Digital Amplification
+            </h2>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto font-light leading-relaxed">
+              Everything points to one place: The Hub. Strategic digital tactics that drive traffic and amplify the unified brand story.
+            </p>
           </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/30"
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Heart className="text-white" size={32} />
+              <h3 className="text-3xl font-light text-slate-800 mb-6">The Flywheel Effect</h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <span className="text-white font-bold text-sm">1</span>
+                  </div>
+                  <div>
+                    <div className="font-medium text-slate-800">Reader sees print spread</div>
+                    <div className="text-slate-600 font-light text-sm">Beautiful double-page visual in CA magazine</div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <span className="text-white font-bold text-sm">2</span>
+                  </div>
+                  <div>
+                    <div className="font-medium text-slate-800">Scans QR code</div>
+                    <div className="text-slate-600 font-light text-sm">Instantly arrives at Plasencia hub homepage</div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <span className="text-white font-bold text-sm">3</span>
+                  </div>
+                  <div>
+                    <div className="font-medium text-slate-800">Explores hub</div>
+                    <div className="text-slate-600 font-light text-sm">Discovers complete brand story, heritage, products</div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                    <span className="text-white font-bold text-sm">4</span>
+                  </div>
+                  <div>
+                    <div className="font-medium text-slate-800">Multiple touchpoints</div>
+                    <div className="text-slate-600 font-light text-sm">E-blasts, social, display bring them back to hub</div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-light text-slate-800 mb-4">For Readers</h3>
-              <ul className="space-y-3 text-slate-600 font-light">
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Rich, immersive content
-                    </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Interactive brand experiences
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={16} />
-                  Deeper brand connection
-                </li>
-                </ul>
-              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Mail className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Email Marketing</h4>
+                </div>
+                <div className="text-2xl font-light text-slate-800 mb-2">$15,000</div>
+                <p className="text-slate-600 font-light text-sm leading-relaxed">
+                  3 dedicated e-blasts to 200K+ subscribers, driving traffic to hub with compelling creative and strategic timing.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Users className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Cigar Watch Newsletter</h4>
+                </div>
+                <div className="text-2xl font-light text-slate-800 mb-2">$9,000</div>
+                <p className="text-slate-600 font-light text-sm leading-relaxed">
+                  2 premium placements targeting the most passionate cigar aficionados with strategic hub content.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Globe className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Social & Display</h4>
+                </div>
+                <div className="text-2xl font-light text-slate-800 mb-2">~$20,000</div>
+                <p className="text-slate-600 font-light text-sm leading-relaxed">
+                  Year-long integrated campaign across social media and programmatic display, all driving to hub.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
