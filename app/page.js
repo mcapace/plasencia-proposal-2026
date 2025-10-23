@@ -123,7 +123,6 @@ export default function Home() {
               </motion.div>
               
               <h1 className="text-5xl lg:text-7xl font-extralight text-slate-800 mb-6 leading-tight">
-                <span className="block font-thin">PLASENCIA</span>
                 <span className="block text-2xl lg:text-3xl text-slate-500 font-extralight">
                   12 Months | 2026
                 </span>
