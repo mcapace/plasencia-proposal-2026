@@ -201,7 +201,7 @@ export default function Home() {
         </div>
               <h3 className="text-2xl font-light text-slate-800 mb-4">Print Dominance</h3>
               <p className="text-slate-600 font-light leading-relaxed">
-                Six double-page spreads in every issue of Cigar Aficionado, ensuring maximum visibility and premium positioning.
+                Six double-page spreads in every issue of Cigar Aficionado, ensuring maximum visibility and strategic positioning.
               </p>
         </motion.div>
 
@@ -254,7 +254,7 @@ export default function Home() {
               Print Program
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              Six double-page spreads that dominate every issue of Cigar Aficionado, creating an unmissable presence in the world's premier cigar publication.
+              Six double-page spreads that dominate every issue of Cigar Aficionado, creating an unmissable presence in the world's leading cigar publication.
             </p>
           </motion.div>
 
@@ -276,10 +276,10 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
                     <span className="text-slate-600 font-light">6 Double-Page Spreads</span>
-                    <span className="text-2xl font-light text-slate-800">$310,800</span>
+                    <span className="text-2xl font-light text-slate-800">Pre-committed</span>
               </div>
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
-                    <span className="text-slate-600 font-light">Premium Placement</span>
+                    <span className="text-slate-600 font-light">Strategic Placement</span>
                     <span className="text-lg text-slate-500">Included</span>
                 </div>
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
@@ -309,7 +309,7 @@ export default function Home() {
                   <h4 className="text-xl font-light text-slate-800">Maximum Impact</h4>
               </div>
                 <p className="text-slate-600 font-light leading-relaxed">
-                  Every issue of Cigar Aficionado will feature Plasencia prominently, ensuring consistent brand presence and premium positioning.
+                  Every issue of Cigar Aficionado will feature Plasencia prominently, ensuring consistent brand presence and strategic positioning.
                 </p>
           </div>
 
@@ -463,10 +463,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-              Premium Portfolio
+              Complete Plasencia Portfolio
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              The complete Plasencia collection - from heritage blends to limited editions, each representing generations of tobacco expertise.
+              The full Plasencia collection - from heritage blends to limited editions, each representing generations of tobacco expertise.
             </p>
                   </motion.div>
 
@@ -511,6 +511,54 @@ export default function Home() {
                 </div>
                 <p className="text-slate-600 font-light leading-relaxed">
                   Exclusive releases including Year of the Dragon and Edición Especial Qatar 22, showcasing our finest craftsmanship.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Flame className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Alma del Fuego</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  A fiery blend that captures the passion and intensity of Plasencia's tobacco expertise.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Cloud className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Alma del Cielo</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  A heavenly blend that represents the ethereal qualities of Plasencia's finest tobaccos.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Star className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">Reserva Original</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  The original blend that started it all, featuring classic Plasencia flavors and traditional craftsmanship.
+                </p>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                    <Calendar className="text-white" size={20} />
+                  </div>
+                  <h4 className="text-xl font-light text-slate-800">149 & 151 Cosecha</h4>
+                </div>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Vintage releases that showcase the exceptional quality of specific harvest years and growing seasons.
                 </p>
               </div>
             </motion.div>
@@ -746,7 +794,7 @@ export default function Home() {
                 <PenTool className="text-white" size={36} />
               </div>
               <h3 className="text-2xl font-light text-slate-800 mb-4">Print Program</h3>
-              <div className="text-4xl font-light text-slate-800 mb-2">$310,800</div>
+              <div className="text-4xl font-light text-slate-800 mb-2">Pre-committed</div>
               <p className="text-slate-600 font-light">Six double-page spreads</p>
             </motion.div>
 
@@ -775,8 +823,8 @@ export default function Home() {
               <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <DollarSign className="text-white" size={36} />
               </div>
-              <h3 className="text-2xl font-light text-white mb-4">Total Investment</h3>
-              <div className="text-4xl font-light text-white mb-2">$400,000</div>
+              <h3 className="text-2xl font-light text-white mb-4">Digital Investment</h3>
+              <div className="text-4xl font-light text-white mb-2">$89,200</div>
               <p className="text-amber-100 font-light">12-month program</p>
             </motion.div>
 
@@ -811,7 +859,7 @@ export default function Home() {
             >
               <h3 className="text-3xl font-light text-slate-800 mb-6">The Strategic Vision</h3>
               <p className="text-lg text-slate-600 font-light leading-relaxed mb-6">
-                A unified, year-long brand narrative that positions Plasencia as THE authority in premium cigars. Through strategic integration of print and digital across Cigar Aficionado, this program creates one cohesive story told across multiple touchpoints.
+                A unified, year-long brand narrative that positions Plasencia as THE authority in cigars. Through strategic integration of print and digital across Cigar Aficionado, this program creates one cohesive story told across multiple touchpoints.
               </p>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
                 <div className="text-center">
