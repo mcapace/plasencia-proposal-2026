@@ -73,7 +73,7 @@ export default function Home() {
             <img 
               src="/images/Plasencia-brothers-tobaccoplants.jpg" 
               alt="Plasencia team in tobacco field" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
           </div>
           <div className="absolute top-20 left-10 w-96 h-96 bg-green-200/20 rounded-full blur-3xl animate-pulse"></div>
@@ -83,10 +83,10 @@ export default function Home() {
 
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center lg:text-left"
             >
               {/* Plasencia Logo */}
@@ -99,7 +99,7 @@ export default function Home() {
                 <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-5 shadow-xl border border-amber-200/50">
                   <div className="w-20 h-20 flex items-center justify-center">
                     <img 
-                      src="/images/plasencia-cigars-logo (1).jpg" 
+                      src="/images/plasencia-cigars-logo__1_-removebg-preview.png" 
                       alt="Plasencia Cigars Logo" 
                       className="w-16 h-16 object-contain"
                     />
@@ -108,8 +108,8 @@ export default function Home() {
                     <div className="text-3xl font-bold text-slate-800 tracking-wide">PLASENCIA</div>
                     <div className="text-sm text-slate-600 font-bold tracking-wider">CIGARS</div>
                   </div>
-                </div>
-              </motion.div>
+            </div>
+          </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -134,20 +134,6 @@ export default function Home() {
                 An elegant, integrated marketing program that positions Plasencia as the world's premier cigar brand through strategic print dominance and sophisticated digital innovation.
               </p>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-              >
-                <button className="bg-gradient-to-r from-amber-600 to-orange-700 text-white px-8 py-4 rounded-full font-medium text-lg hover:from-amber-700 hover:to-orange-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  View Full Proposal
-                  <ArrowRight className="inline-block ml-2" size={20} />
-                </button>
-                <button className="border-2 border-amber-600 text-amber-700 px-8 py-4 rounded-full font-medium text-lg hover:bg-amber-50 transition-all duration-300">
-                  Download PDF
-                </button>
-              </motion.div>
             </motion.div>
 
           <motion.div
@@ -221,14 +207,14 @@ export default function Home() {
             >
               <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                 <BookOpen className="text-white" size={32} />
-          </div>
+        </div>
               <h3 className="text-2xl font-light text-slate-800 mb-4">Print Dominance</h3>
               <p className="text-slate-600 font-light leading-relaxed">
                 Six double-page spreads in every issue of Cigar Aficionado, ensuring maximum visibility and premium positioning.
               </p>
         </motion.div>
 
-          <motion.div
+        <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -244,7 +230,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -253,12 +239,12 @@ export default function Home() {
           >
               <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                 <Zap className="text-white" size={32} />
-            </div>
+          </div>
               <h3 className="text-2xl font-light text-slate-800 mb-4">Amplification</h3>
               <p className="text-slate-600 font-light leading-relaxed">
                 Strategic digital amplification that extends reach and creates measurable impact across all channels.
               </p>
-          </motion.div>
+        </motion.div>
           </div>
         </div>
       </section>
@@ -282,17 +268,17 @@ export default function Home() {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+            viewport={{ once: true }}
             >
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                     <PenTool className="text-white" size={24} />
-                  </div>
+            </div>
                   <h3 className="text-2xl font-light text-slate-800">Investment Breakdown</h3>
                 </div>
                 
@@ -300,22 +286,22 @@ export default function Home() {
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
                     <span className="text-slate-600 font-light">6 Double-Page Spreads</span>
                     <span className="text-2xl font-light text-slate-800">$310,800</span>
-                  </div>
+              </div>
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
                     <span className="text-slate-600 font-light">Premium Placement</span>
                     <span className="text-lg text-slate-500">Included</span>
-                  </div>
+                </div>
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
                     <span className="text-slate-600 font-light">Creative Development</span>
                     <span className="text-lg text-slate-500">Included</span>
-                  </div>
+              </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-slate-600 font-light">Production & Design</span>
                     <span className="text-lg text-slate-500">Included</span>
-                  </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -391,7 +377,7 @@ export default function Home() {
                   <img 
                     src="/images/Plasencia-brothers-tobaccoplants.jpg" 
                     alt="Plasencia team in tobacco field" 
-                    className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                    className="w-full h-56 object-cover object-center rounded-2xl shadow-lg"
                   />
                 </div>
                 
@@ -538,11 +524,11 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
               className="relative"
             >
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
@@ -593,7 +579,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+          </motion.div>
           </div>
         </div>
       </section>
@@ -1057,97 +1043,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-amber-600 to-orange-700">
-        <div className="container mx-auto px-6 text-center">
+      {/* Contact Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-amber-50/30">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
           >
-            <h2 className="text-4xl lg:text-5xl font-light text-white mb-6">
-              Ready to Elevate Plasencia?
-            </h2>
-            <p className="text-xl text-amber-100 max-w-3xl mx-auto font-light leading-relaxed mb-8">
-              Join us in creating the most sophisticated and effective cigar marketing program in the industry.
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Let's Build Your Story
+              </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed mb-12">
+              Ready to create the most sophisticated cigar marketing program in the industry? Let's discuss how we can elevate Plasencia's brand story.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-amber-700 px-8 py-4 rounded-full font-medium text-lg hover:bg-amber-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Start the Program
-                <ArrowRight className="inline-block ml-2" size={20} />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white/10 transition-all duration-300">
-                Schedule Meeting
-              </button>
+            
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center mb-6">
+                <img 
+                  src="/images/plasencia-cigars-logo__1_-removebg-preview.png" 
+                  alt="Plasencia Cigars Logo" 
+                  className="w-12 h-12 object-contain mr-4"
+                />
+                <div className="text-left">
+                  <div className="text-2xl font-bold text-slate-800">Jake Cohen</div>
+                  <div className="text-lg text-amber-700 font-medium">Account Executive</div>
+              </div>
+              </div>
+              
+              <div className="space-y-3 text-slate-600 font-light">
+                <div className="flex items-center justify-center">
+                  <Mail className="mr-3 text-amber-600" size={18} />
+                  <span>M. Shanken Communications, Inc.</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="mr-3 text-amber-600" size={18} />
+                  <span>825 Eighth Ave, Worldwide Plaza, 33rd Floor</span>
+              </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="mr-3 text-amber-600" size={18} />
+                  <span>New York, New York 10019</span>
+            </div>
+                <div className="flex items-center justify-center">
+                  <Phone className="mr-3 text-amber-600" size={18} />
+                  <span className="font-medium">Cell: 203-561-3977</span>
+            </div>
+            </div>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-800 text-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <img 
-                    src="/images/plasencia-cigars-logo (1).jpg" 
-                    alt="Plasencia Cigars Logo" 
-                    className="w-10 h-10 object-contain"
-                  />
-                </div>
-                <div>
-                  <div className="text-xl font-bold">PLASENCIA</div>
-                  <div className="text-sm text-slate-400 font-bold">CIGARS</div>
-                </div>
-              </div>
-              <p className="text-slate-400 font-light leading-relaxed">
-                Elevating the art of cigar making through premium marketing and brand excellence.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-light text-white mb-4">Program</h3>
-              <ul className="space-y-2 text-slate-400 font-light">
-                <li>Print Dominance</li>
-                <li>Digital Hub</li>
-                <li>Brand Amplification</li>
-                <li>Success Metrics</li>
-              </ul>
-                </div>
-            
-            <div>
-              <h3 className="text-lg font-light text-white mb-4">Investment</h3>
-              <ul className="space-y-2 text-slate-400 font-light">
-                <li>Total: $400,000</li>
-                <li>Print: $310,800</li>
-                <li>Digital: $89,200</li>
-                <li>Duration: 12 Months</li>
-              </ul>
-              </div>
-            
-            <div>
-              <h3 className="text-lg font-light text-white mb-4">Contact</h3>
-              <div className="space-y-2 text-slate-400 font-light">
-                <div className="flex items-center">
-                  <Mail className="mr-2" size={16} />
-                  info@plasencia.com
-            </div>
-                <div className="flex items-center">
-                  <Phone className="mr-2" size={16} />
-                  +1 (555) 123-4567
-            </div>
-            </div>
-        </div>
-          </div>
-          
-          <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400 font-light">
-            <p>&copy; 2024 Plasencia Cigars. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }
