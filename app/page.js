@@ -277,18 +277,18 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
                     <span className="text-slate-600 font-light">6 Double-Page Spreads</span>
-                    <span className="text-2xl font-light text-slate-800">Pre-committed</span>
+                    <span className="text-2xl font-light text-slate-800">$310,800</span>
               </div>
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
                     <span className="text-slate-600 font-light">Strategic Placement</span>
                     <span className="text-lg text-slate-500">Included</span>
                 </div>
                   <div className="flex justify-between items-center py-3 border-b border-amber-100">
-                    <span className="text-slate-600 font-light">Creative Development</span>
+                    <span className="text-slate-600 font-light">Digital Creative Development</span>
                     <span className="text-lg text-slate-500">Included</span>
               </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-slate-600 font-light">Production & Design</span>
+                    <span className="text-slate-600 font-light">Digital Production & Design</span>
                     <span className="text-lg text-slate-500">Included</span>
                 </div>
               </div>
@@ -302,29 +302,6 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Target className="text-white" size={20} />
-                    </div>
-                  <h4 className="text-xl font-light text-slate-800">Maximum Impact</h4>
-              </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  Every issue of Cigar Aficionado will feature Plasencia prominently, ensuring consistent brand presence and strategic positioning.
-                </p>
-          </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Crown className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">Premium Positioning</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  Strategic placement in the most prestigious sections of the magazine, reinforcing Plasencia's luxury status.
-                </p>
-              </div>
           </motion.div>
           </div>
         </div>
@@ -360,7 +337,7 @@ export default function Home() {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-light text-slate-800 mb-4">Tobacco Field Excellence</h3>
                   <p className="text-slate-600 font-light leading-relaxed">
-                    Our team works directly in the tobacco fields, ensuring every leaf meets our exacting standards for premium cigar production.
+                    The Plasencia team works directly in the tobacco fields, ensuring every leaf meets our exacting standards for premium cigar production.
                   </p>
                 </div>
                 
@@ -417,13 +394,13 @@ export default function Home() {
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-amber-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
                     <Leaf className="text-white" size={20} />
-                  </div>
+                    </div>
                   <h4 className="text-xl font-light text-slate-800">Tobacco Cultivation</h4>
-                </div>
+              </div>
                 <p className="text-slate-600 font-light leading-relaxed">
                   Our team works directly in the tobacco fields, ensuring every leaf meets our exacting standards for premium cigar production.
                 </p>
-              </div>
+          </div>
 
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-200/30">
                 <div className="flex items-center mb-4">
@@ -448,181 +425,11 @@ export default function Home() {
                   Multi-generational expertise passed down through the Plasencia family, creating cigars that honor tradition while embracing innovation.
                 </p>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Premium Products Section */}
-      <section className="py-24 bg-gradient-to-br from-amber-50/30 to-orange-50/20">
-        <div className="container mx-auto px-6">
-                  <motion.div
-            initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-              Complete Plasencia Portfolio
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              The full Plasencia collection - from heritage blends to limited editions, each representing generations of tobacco expertise.
-            </p>
-                  </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Cigarette className="text-white" size={20} />
-              </div>
-                  <h4 className="text-xl font-light text-slate-800">Alma del Campo</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  A celebration of the field, featuring the finest Nicaraguan tobaccos with rich, complex flavors.
-                </p>
-          </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Crown className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">Alma Fuerte</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  Our most powerful blend, featuring bold Nicaraguan tobaccos with exceptional strength and character.
-                </p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Gem className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">Limited Editions</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  Exclusive releases including Year of the Dragon and Edición Especial Qatar 22, showcasing our finest craftsmanship.
-                </p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Flame className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">Alma del Fuego</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  A fiery blend that captures the passion and intensity of Plasencia's tobacco expertise.
-                </p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Cloud className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">Alma del Cielo</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  A heavenly blend that represents the ethereal qualities of Plasencia's finest tobaccos.
-                </p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Star className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">Reserva Original</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  The original blend that started it all, featuring classic Plasencia flavors and traditional craftsmanship.
-                </p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                    <Calendar className="text-white" size={20} />
-                  </div>
-                  <h4 className="text-xl font-light text-slate-800">149 & 151 Cosecha</h4>
-                </div>
-                <p className="text-slate-600 font-light leading-relaxed">
-                  Vintage releases that showcase the exceptional quality of specific harvest years and growing seasons.
-                </p>
-              </div>
-            </motion.div>
-
-          <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-light text-slate-800 mb-4">The Plasencia Collection</h3>
-                  <p className="text-slate-600 font-light leading-relaxed">
-                    Each cigar represents generations of expertise, from tobacco cultivation to the final hand-rolled masterpiece.
-                  </p>
-                </div>
-                
-                {/* Cigar Product Image */}
-                <div className="mb-6">
-                  <img 
-                    src="/images/Plasencia_Ehtefal_1022_Detail_13-scaled.jpg" 
-                    alt="Plasencia Premium Cigars" 
-                    className="w-full h-48 object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
-                      <Leaf className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-lg font-light text-slate-800 mb-1">Premium Tobacco</h4>
-                    <p className="text-slate-500 font-light text-sm">Finest Nicaraguan leaves</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
-                      <Award className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-lg font-light text-slate-800 mb-1">Award Winning</h4>
-                    <p className="text-slate-500 font-light text-sm">Industry recognition</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
-                      <Heart className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-lg font-light text-slate-800 mb-1">Hand Crafted</h4>
-                    <p className="text-slate-500 font-light text-sm">Artisanal excellence</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
-                      <Crown className="text-white" size={24} />
-                    </div>
-                    <h4 className="text-lg font-light text-slate-800 mb-1">Heritage</h4>
-                    <p className="text-slate-500 font-light text-sm">Multi-generational</p>
-                  </div>
-                </div>
-              </div>
           </motion.div>
           </div>
         </div>
       </section>
+
 
       {/* Digital Hub Section */}
       <section className="py-24 bg-white/50 backdrop-blur-sm">
@@ -795,7 +602,7 @@ export default function Home() {
                 <PenTool className="text-white" size={36} />
               </div>
               <h3 className="text-2xl font-light text-slate-800 mb-4">Print Program</h3>
-              <div className="text-4xl font-light text-slate-800 mb-2">Pre-committed</div>
+              <div className="text-4xl font-light text-slate-800 mb-2">$310,800</div>
               <p className="text-slate-600 font-light">Six double-page spreads</p>
             </motion.div>
 
@@ -824,8 +631,8 @@ export default function Home() {
               <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <DollarSign className="text-white" size={36} />
               </div>
-              <h3 className="text-2xl font-light text-white mb-4">Digital Investment</h3>
-              <div className="text-4xl font-light text-white mb-2">$89,200</div>
+              <h3 className="text-2xl font-light text-white mb-4">Total Investment</h3>
+              <div className="text-4xl font-light text-white mb-2">$400,000</div>
               <p className="text-amber-100 font-light">12-month program</p>
             </motion.div>
 
@@ -908,7 +715,7 @@ export default function Home() {
             {[
               { title: "Heritage & Legacy", desc: "Family history, tobacco expertise, multi-generational craftsmanship" },
               { title: "2026 Anniversary", desc: "Milestone achievements, limited editions, exclusive content" },
-              { title: "The Celebration", desc: "Event coverage, VIP testimonials, behind-the-scenes access" },
+              { title: "The Celebration", desc: "VIP testimonials, behind-the-scenes access" },
               { title: "The Cigars", desc: "Complete portfolio, tasting profiles, awards and acclaim" },
               { title: "News & Stories", desc: "Living content feed, press releases, industry recognition" },
               { title: "Experience Plasencia", desc: "Retailer locator, authorized dealers, tasting events" }
@@ -1104,7 +911,6 @@ export default function Home() {
                   "Sponsored content readership",
                   "Heritage section engagement",
                   "Product page views",
-                  "Event coverage reach"
                 ]
               },
               { 
