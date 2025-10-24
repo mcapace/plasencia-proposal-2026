@@ -35,7 +35,8 @@ import {
   Lightbulb,
   Shield,
   Heart,
-  Coffee
+  Coffee,
+  Cloud
 } from 'lucide-react'
 
 export default function Home() {
