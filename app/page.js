@@ -640,6 +640,162 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Deliverables & Timeline Section */}
+      <section className="py-24 bg-gradient-to-br from-amber-50/50 to-orange-50/30">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
+              Deliverables & Timeline
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+              A comprehensive breakdown of all digital deliverables and their execution timeline throughout 2026.
+            </p>
+          </motion.div>
+
+          {/* Timeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
+              <h3 className="text-2xl font-light text-slate-800 mb-8 text-center">Program Timeline</h3>
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-600 to-orange-700 transform md:-translate-x-1/2"></div>
+                
+                {/* Timeline items */}
+                <div className="space-y-8">
+                  {[
+                    { month: "Jan 2026", title: "Program Launch", desc: "Landing page live, first print spread published" },
+                    { month: "Feb - Mar", title: "Content Development", desc: "Articles, native extensions, social content" },
+                    { month: "Apr - Jun", title: "Mid-Year Amplification", desc: "Instagram campaigns, paid social, newsletters" },
+                    { month: "Jul - Sep", title: "Continued Engagement", desc: "Dedicated emails, ongoing social presence" },
+                    { month: "Oct - Dec", title: "Year-End Push", desc: "Final campaigns, performance review" }
+                  ].map((item, index) => (
+                    <div key={index} className="relative flex items-start md:items-center">
+                      <div className={`relative z-10 flex-1 md:flex-none md:w-1/2 ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:ml-auto md:text-left md:pl-8'}`}>
+                        <div className={`bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/30 ${index % 2 === 0 ? 'md:mr-auto md:max-w-md' : 'md:ml-auto md:max-w-md'}`}>
+                          <div className="flex items-center mb-2">
+                            <div className="w-3 h-3 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full mr-3"></div>
+                            <span className="text-amber-700 font-medium">{item.month}</span>
+                          </div>
+                          <h4 className="text-lg font-light text-slate-800 mb-1">{item.title}</h4>
+                          <p className="text-slate-600 font-light text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                      <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-amber-600 to-orange-700 rounded-full border-4 border-white shadow-lg z-20"></div>
+                      <div className={`hidden md:block flex-1 ${index % 2 === 0 ? '' : 'order-first'}`}></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Deliverables Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30 overflow-x-auto">
+              <h3 className="text-2xl font-light text-slate-800 mb-8 text-center">Digital Deliverables Breakdown</h3>
+              
+              {/* Desktop Table */}
+              <div className="hidden md:block">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b-2 border-amber-200">
+                      <th className="text-left py-4 px-4 text-slate-800 font-medium">Deliverable</th>
+                      <th className="text-center py-4 px-4 text-slate-800 font-medium">Quantity</th>
+                      <th className="text-right py-4 px-4 text-slate-800 font-medium">Cost</th>
+                      <th className="text-right py-4 px-4 text-slate-800 font-medium">Reach/Impressions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { deliverable: "Landing Page (12 months)", quantity: "1", cost: "$4,000", reach: "-" },
+                      { deliverable: "Article + Homepage", quantity: "2", cost: "$6,000", reach: "-" },
+                      { deliverable: "Native Extension (6 months)", quantity: "1", cost: "$13,897", reach: "465,000" },
+                      { deliverable: "Instagram Posts", quantity: "3", cost: "$12,000", reach: "489K followers" },
+                      { deliverable: "Instagram Stories", quantity: "2", cost: "$7,000", reach: "-" },
+                      { deliverable: "Paid Social (6 months)", quantity: "1", cost: "$13,897", reach: "555,880" },
+                      { deliverable: "Cigar Watch Newsletter", quantity: "3", cost: "$15,000", reach: "480K subscribers" },
+                      { deliverable: "Dedicated Emails", quantity: "4", cost: "$20,000", reach: "200K subscribers" }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-amber-100 hover:bg-amber-50/50 transition-colors">
+                        <td className="py-4 px-4 text-slate-700 font-light">{item.deliverable}</td>
+                        <td className="py-4 px-4 text-center text-slate-700 font-light">{item.quantity}</td>
+                        <td className="py-4 px-4 text-right text-slate-800 font-medium">{item.cost}</td>
+                        <td className="py-4 px-4 text-right text-slate-600 font-light">{item.reach}</td>
+                      </tr>
+                    ))}
+                    <tr className="border-t-2 border-amber-600 bg-gradient-to-r from-amber-50/50 to-orange-50/30">
+                      <td colSpan="2" className="py-6 px-4 text-slate-800 font-medium text-lg">GRAND TOTAL</td>
+                      <td className="py-6 px-4 text-right text-slate-800 font-bold text-xl">$91,794</td>
+                      <td className="py-6 px-4 text-right text-slate-800 font-medium">~2.1M impressions</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile Cards */}
+              <div className="md:hidden space-y-4">
+                {[
+                  { deliverable: "Landing Page (12 months)", quantity: "1", cost: "$4,000", reach: "-" },
+                  { deliverable: "Article + Homepage", quantity: "2", cost: "$6,000", reach: "-" },
+                  { deliverable: "Native Extension (6 months)", quantity: "1", cost: "$13,897", reach: "465,000" },
+                  { deliverable: "Instagram Posts", quantity: "3", cost: "$12,000", reach: "489K followers" },
+                  { deliverable: "Instagram Stories", quantity: "2", cost: "$7,000", reach: "-" },
+                  { deliverable: "Paid Social (6 months)", quantity: "1", cost: "$13,897", reach: "555,880" },
+                  { deliverable: "Cigar Watch Newsletter", quantity: "3", cost: "$15,000", reach: "480K subscribers" },
+                  { deliverable: "Dedicated Emails", quantity: "4", cost: "$20,000", reach: "200K subscribers" }
+                ].map((item, index) => (
+                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-amber-200/30">
+                    <h4 className="text-lg font-light text-slate-800 mb-3">{item.deliverable}</h4>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div>
+                        <span className="text-slate-500 font-light">Quantity:</span>
+                        <span className="ml-2 text-slate-800 font-medium">{item.quantity}</span>
+                      </div>
+                      <div>
+                        <span className="text-slate-500 font-light">Cost:</span>
+                        <span className="ml-2 text-slate-800 font-medium">{item.cost}</span>
+                      </div>
+                      {item.reach !== "-" && (
+                        <div className="col-span-2">
+                          <span className="text-slate-500 font-light">Reach:</span>
+                          <span className="ml-2 text-slate-800 font-medium">{item.reach}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+                
+                {/* Mobile Total */}
+                <div className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl p-6 shadow-lg text-white">
+                  <div className="text-center">
+                    <div className="text-lg font-light mb-2">GRAND TOTAL</div>
+                    <div className="text-3xl font-bold mb-2">$91,794</div>
+                    <div className="text-amber-100 font-light">~2.1M impressions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* The Unified Story Section */}
       <section className="py-24 bg-gradient-to-br from-amber-50/50 to-orange-50/30">
         <div className="container mx-auto px-6">
