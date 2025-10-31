@@ -651,10 +651,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-              Deliverables & Timeline
+              Digital Deliverables & Timeline
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-              A comprehensive breakdown of all digital deliverables and their execution timeline throughout 2026.
+              A comprehensive digital program timeline and investment overview for 2026.
             </p>
           </motion.div>
 
@@ -667,7 +667,7 @@ export default function Home() {
             className="mb-16"
           >
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
-              <h3 className="text-2xl font-light text-slate-800 mb-8 text-center">Program Timeline</h3>
+              <h3 className="text-2xl font-light text-slate-800 mb-8 text-center">Digital Program Timeline</h3>
               <div className="relative">
                 {/* Timeline line */}
                 <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-600 to-orange-700 transform md:-translate-x-1/2"></div>
@@ -675,11 +675,11 @@ export default function Home() {
                 {/* Timeline items */}
                 <div className="space-y-8">
                   {[
-                    { month: "Jan 2026", title: "Program Launch", desc: "Landing page live, first print spread published" },
-                    { month: "Feb - Mar", title: "Content Development", desc: "Articles, native extensions, social content" },
-                    { month: "Apr - Jun", title: "Mid-Year Amplification", desc: "Instagram campaigns, paid social, newsletters" },
-                    { month: "Jul - Sep", title: "Continued Engagement", desc: "Dedicated emails, ongoing social presence" },
-                    { month: "Oct - Dec", title: "Year-End Push", desc: "Final campaigns, performance review" }
+                    { month: "Jan 2026", title: "Digital Hub Launch", desc: "Landing page goes live, hub platform launches" },
+                    { month: "Feb - Mar", title: "Content Development", desc: "Sponsored articles, native extensions, social content creation" },
+                    { month: "Apr - Jun", title: "Mid-Year Amplification", desc: "Instagram campaigns, paid social, newsletter distribution" },
+                    { month: "Jul - Sep", title: "Continued Engagement", desc: "Dedicated emails, ongoing social presence, content updates" },
+                    { month: "Oct - Dec", title: "Year-End Push", desc: "Final campaigns, performance review, year-end metrics" }
                   ].map((item, index) => (
                     <div key={index} className="relative flex items-start md:items-center">
                       <div className={`relative z-10 flex-1 md:flex-none md:w-1/2 ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:ml-auto md:text-left md:pl-8'}`}>
@@ -701,98 +701,68 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Deliverables Table */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30 overflow-x-auto">
-              <h3 className="text-2xl font-light text-slate-800 mb-8 text-center">Digital Deliverables Breakdown</h3>
-              
-              {/* Desktop Table */}
-              <div className="hidden md:block">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b-2 border-amber-200">
-                      <th className="text-left py-4 px-4 text-slate-800 font-medium">Deliverable</th>
-                      <th className="text-center py-4 px-4 text-slate-800 font-medium">Quantity</th>
-                      <th className="text-right py-4 px-4 text-slate-800 font-medium">Cost</th>
-                      <th className="text-right py-4 px-4 text-slate-800 font-medium">Reach/Impressions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      { deliverable: "Landing Page (12 months)", quantity: "1", cost: "$4,000", reach: "-" },
-                      { deliverable: "Article + Homepage", quantity: "2", cost: "$6,000", reach: "-" },
-                      { deliverable: "Native Extension (6 months)", quantity: "1", cost: "$13,897", reach: "465,000" },
-                      { deliverable: "Instagram Posts", quantity: "3", cost: "$12,000", reach: "489K followers" },
-                      { deliverable: "Instagram Stories", quantity: "2", cost: "$7,000", reach: "-" },
-                      { deliverable: "Paid Social (6 months)", quantity: "1", cost: "$13,897", reach: "555,880" },
-                      { deliverable: "Cigar Watch Newsletter", quantity: "3", cost: "$15,000", reach: "480K subscribers" },
-                      { deliverable: "Dedicated Emails", quantity: "4", cost: "$20,000", reach: "200K subscribers" }
-                    ].map((item, index) => (
-                      <tr key={index} className="border-b border-amber-100 hover:bg-amber-50/50 transition-colors">
-                        <td className="py-4 px-4 text-slate-700 font-light">{item.deliverable}</td>
-                        <td className="py-4 px-4 text-center text-slate-700 font-light">{item.quantity}</td>
-                        <td className="py-4 px-4 text-right text-slate-800 font-medium">{item.cost}</td>
-                        <td className="py-4 px-4 text-right text-slate-600 font-light">{item.reach}</td>
-                      </tr>
-                    ))}
-                    <tr className="border-t-2 border-amber-600 bg-gradient-to-r from-amber-50/50 to-orange-50/30">
-                      <td colSpan="2" className="py-6 px-4 text-slate-800 font-medium text-lg">GRAND TOTAL</td>
-                      <td className="py-6 px-4 text-right text-slate-800 font-bold text-xl">$91,794</td>
-                      <td className="py-6 px-4 text-right text-slate-800 font-medium">~2.1M impressions</td>
-                    </tr>
-                  </tbody>
-                </table>
+          {/* Investment Summary & Sponsored Content */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Digital Investment Total */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-3xl p-8 shadow-2xl text-white text-center">
+                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <DollarSign className="text-white" size={36} />
+                </div>
+                <h3 className="text-2xl font-light text-white mb-4">Digital Investment</h3>
+                <div className="text-5xl font-light text-white mb-2">$89,200</div>
+                <p className="text-amber-100 font-light">12-month digital program</p>
+                <p className="text-amber-100 font-light mt-4 text-sm">~2.1M total impressions</p>
               </div>
+            </motion.div>
 
-              {/* Mobile Cards */}
-              <div className="md:hidden space-y-4">
-                {[
-                  { deliverable: "Landing Page (12 months)", quantity: "1", cost: "$4,000", reach: "-" },
-                  { deliverable: "Article + Homepage", quantity: "2", cost: "$6,000", reach: "-" },
-                  { deliverable: "Native Extension (6 months)", quantity: "1", cost: "$13,897", reach: "465,000" },
-                  { deliverable: "Instagram Posts", quantity: "3", cost: "$12,000", reach: "489K followers" },
-                  { deliverable: "Instagram Stories", quantity: "2", cost: "$7,000", reach: "-" },
-                  { deliverable: "Paid Social (6 months)", quantity: "1", cost: "$13,897", reach: "555,880" },
-                  { deliverable: "Cigar Watch Newsletter", quantity: "3", cost: "$15,000", reach: "480K subscribers" },
-                  { deliverable: "Dedicated Emails", quantity: "4", cost: "$20,000", reach: "200K subscribers" }
-                ].map((item, index) => (
-                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-amber-200/30">
-                    <h4 className="text-lg font-light text-slate-800 mb-3">{item.deliverable}</h4>
-                    <div className="grid grid-cols-2 gap-3 text-sm">
-                      <div>
-                        <span className="text-slate-500 font-light">Quantity:</span>
-                        <span className="ml-2 text-slate-800 font-medium">{item.quantity}</span>
-                      </div>
-                      <div>
-                        <span className="text-slate-500 font-light">Cost:</span>
-                        <span className="ml-2 text-slate-800 font-medium">{item.cost}</span>
-                      </div>
-                      {item.reach !== "-" && (
-                        <div className="col-span-2">
-                          <span className="text-slate-500 font-light">Reach:</span>
-                          <span className="ml-2 text-slate-800 font-medium">{item.reach}</span>
-                        </div>
-                      )}
-                    </div>
+            {/* Sponsored Content Placement */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-700 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                    <BookOpen className="text-white" size={24} />
                   </div>
-                ))}
+                  <h3 className="text-2xl font-light text-slate-800">Sponsored Content Articles</h3>
+                </div>
                 
-                {/* Mobile Total */}
-                <div className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl p-6 shadow-lg text-white">
-                  <div className="text-center">
-                    <div className="text-lg font-light mb-2">GRAND TOTAL</div>
-                    <div className="text-3xl font-bold mb-2">$91,794</div>
-                    <div className="text-amber-100 font-light">~2.1M impressions</div>
+                <div className="space-y-4">
+                  <div className="bg-amber-50/50 rounded-xl p-5">
+                    <h4 className="font-medium text-slate-800 mb-2">2 Sponsored Articles</h4>
+                    <p className="text-slate-600 font-light text-sm leading-relaxed mb-3">
+                      Strategically placed editorial content that validates your brand story with Cigar Aficionado's trusted voice.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={18} />
+                        <div>
+                          <div className="text-slate-800 font-medium text-sm">Article + Homepage Placement</div>
+                          <div className="text-slate-600 font-light text-xs">Featured on Cigar Aficionado homepage</div>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <CheckCircle className="text-amber-600 mr-3 mt-1 flex-shrink-0" size={18} />
+                        <div>
+                          <div className="text-slate-800 font-medium text-sm">Digital Hub Integration</div>
+                          <div className="text-slate-600 font-light text-xs">Articles featured within your branded hub</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
