@@ -701,13 +701,87 @@ export default function Home() {
             </div>
           </motion.div>
 
+          {/* Deliverables Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30 overflow-x-auto">
+              <h3 className="text-2xl font-light text-slate-800 mb-8 text-center">Digital Deliverables</h3>
+              
+              {/* Desktop Table */}
+              <div className="hidden md:block">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b-2 border-amber-200">
+                      <th className="text-left py-4 px-4 text-slate-800 font-medium">Deliverable</th>
+                      <th className="text-center py-4 px-4 text-slate-800 font-medium">Quantity</th>
+                      <th className="text-right py-4 px-4 text-slate-800 font-medium">Reach/Impressions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { deliverable: "Landing Page (12 months)", quantity: "1", reach: "-" },
+                      { deliverable: "Article + Homepage", quantity: "2", reach: "-" },
+                      { deliverable: "Native Extension (6 months)", quantity: "1", reach: "465,000" },
+                      { deliverable: "Instagram Posts", quantity: "3", reach: "489K followers" },
+                      { deliverable: "Instagram Stories", quantity: "2", reach: "-" },
+                      { deliverable: "Paid Social (6 months)", quantity: "1", reach: "555,880" },
+                      { deliverable: "Cigar Watch Newsletter", quantity: "3", reach: "480K subscribers" },
+                      { deliverable: "Dedicated Emails", quantity: "4", reach: "200K subscribers" }
+                    ].map((item, index) => (
+                      <tr key={index} className="border-b border-amber-100 hover:bg-amber-50/50 transition-colors">
+                        <td className="py-4 px-4 text-slate-700 font-light">{item.deliverable}</td>
+                        <td className="py-4 px-4 text-center text-slate-700 font-light">{item.quantity}</td>
+                        <td className="py-4 px-4 text-right text-slate-600 font-light">{item.reach}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile Cards */}
+              <div className="md:hidden space-y-4">
+                {[
+                  { deliverable: "Landing Page (12 months)", quantity: "1", reach: "-" },
+                  { deliverable: "Article + Homepage", quantity: "2", reach: "-" },
+                  { deliverable: "Native Extension (6 months)", quantity: "1", reach: "465,000" },
+                  { deliverable: "Instagram Posts", quantity: "3", reach: "489K followers" },
+                  { deliverable: "Instagram Stories", quantity: "2", reach: "-" },
+                  { deliverable: "Paid Social (6 months)", quantity: "1", reach: "555,880" },
+                  { deliverable: "Cigar Watch Newsletter", quantity: "3", reach: "480K subscribers" },
+                  { deliverable: "Dedicated Emails", quantity: "4", reach: "200K subscribers" }
+                ].map((item, index) => (
+                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-amber-200/30">
+                    <h4 className="text-lg font-light text-slate-800 mb-3">{item.deliverable}</h4>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div>
+                        <span className="text-slate-500 font-light">Quantity:</span>
+                        <span className="ml-2 text-slate-800 font-medium">{item.quantity}</span>
+                      </div>
+                      {item.reach !== "-" && (
+                        <div>
+                          <span className="text-slate-500 font-light">Reach:</span>
+                          <span className="ml-2 text-slate-800 font-medium">{item.reach}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
           {/* Investment Summary & Sponsored Content */}
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Digital Investment Total */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-r from-amber-600 to-orange-700 rounded-3xl p-8 shadow-2xl text-white text-center">
@@ -725,7 +799,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-amber-200/30">
