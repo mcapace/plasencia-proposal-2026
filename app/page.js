@@ -724,11 +724,11 @@ export default function Home() {
                   </thead>
                   <tbody>
                     {[
-                      { deliverable: "Landing Page (12 months)", quantity: "1", reach: "-" },
-                      { deliverable: "Article + Homepage", quantity: "2", reach: "-" },
+                      { deliverable: "Landing Page (12 months)", quantity: "1", reach: "TBA" },
+                      { deliverable: "Article + Homepage", quantity: "2", reach: "TBA" },
                       { deliverable: "Native Extension (6 months)", quantity: "1", reach: "465,000" },
                       { deliverable: "Instagram Posts", quantity: "3", reach: "489K followers" },
-                      { deliverable: "Instagram Stories", quantity: "2", reach: "-" },
+                      { deliverable: "Instagram Stories", quantity: "2", reach: "TBA" },
                       { deliverable: "Paid Social (6 months)", quantity: "1", reach: "555,880" },
                       { deliverable: "Cigar Watch Newsletter", quantity: "3", reach: "480K subscribers" },
                       { deliverable: "Dedicated Emails", quantity: "4", reach: "200K subscribers" }
@@ -746,11 +746,11 @@ export default function Home() {
               {/* Mobile Cards */}
               <div className="md:hidden space-y-4">
                 {[
-                  { deliverable: "Landing Page (12 months)", quantity: "1", reach: "-" },
-                  { deliverable: "Article + Homepage", quantity: "2", reach: "-" },
+                  { deliverable: "Landing Page (12 months)", quantity: "1", reach: "TBA" },
+                  { deliverable: "Article + Homepage", quantity: "2", reach: "TBA" },
                   { deliverable: "Native Extension (6 months)", quantity: "1", reach: "465,000" },
                   { deliverable: "Instagram Posts", quantity: "3", reach: "489K followers" },
-                  { deliverable: "Instagram Stories", quantity: "2", reach: "-" },
+                  { deliverable: "Instagram Stories", quantity: "2", reach: "TBA" },
                   { deliverable: "Paid Social (6 months)", quantity: "1", reach: "555,880" },
                   { deliverable: "Cigar Watch Newsletter", quantity: "3", reach: "480K subscribers" },
                   { deliverable: "Dedicated Emails", quantity: "4", reach: "200K subscribers" }
@@ -762,12 +762,10 @@ export default function Home() {
                         <span className="text-slate-500 font-light">Quantity:</span>
                         <span className="ml-2 text-slate-800 font-medium">{item.quantity}</span>
                       </div>
-                      {item.reach !== "-" && (
-                        <div>
-                          <span className="text-slate-500 font-light">Reach:</span>
-                          <span className="ml-2 text-slate-800 font-medium">{item.reach}</span>
-                        </div>
-                      )}
+                      <div>
+                        <span className="text-slate-500 font-light">Reach:</span>
+                        <span className="ml-2 text-slate-800 font-medium">{item.reach}</span>
+                      </div>
                     </div>
                   </div>
                 ))}
