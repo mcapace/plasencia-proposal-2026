@@ -727,7 +727,7 @@ export default function Home() {
                       { deliverable: "Landing Page (12 months)", quantity: "1", reach: "TBA" },
                       { deliverable: "Article + Homepage", quantity: "2", reach: "TBA" },
                       { deliverable: "Native Extension (6 months)", quantity: "1", reach: "465,000" },
-                      { deliverable: "Instagram Posts", quantity: "3", reach: "489K followers" },
+                      { deliverable: "Instagram Posts", quantity: "3", reach: "327K followers" },
                       { deliverable: "Instagram Stories", quantity: "2", reach: "TBA" },
                       { deliverable: "Paid Social (6 months)", quantity: "1", reach: "555,880" },
                       { deliverable: "Cigar Watch Newsletter", quantity: "3", reach: "480K subscribers" },
